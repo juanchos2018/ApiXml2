@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>11in</PageHeight>
+  <PageWidth>8.5in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="conexion">
+      <Query>
+        <DataSourceName>conexion</DataSourceName>
+        <CommandText>SELECT idAgencia,IdTipoDocumento,Serie,NumeroDocumento,YEAR(FechaDocumento)as Anio,MONTH(FechaDocumento) as Mes,  v.IdVendedor,v.Nombre,IdCliente,NombreCliente,IdAlmacen,ImporteTotalmn-ImporteIGVmn as ValorTotalMN,ImporteTotalUS-ImporteIGVUS as ValorTotalUS,ImporteIGVMN,ImporteIGVUS,ImporteTotalmn,ImporteTotalUS FROM COMPROBANTE C INNER JOIN VENDEDOR V  ON C.IdVendedor=V.IdVendedor  Where FechaDocumento between '07/06/2014' and '07/06/2016'</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="idAgencia">
+          <DataField>idAgencia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdTipoDocumento">
+          <DataField>IdTipoDocumento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Serie">
+          <DataField>Serie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroDocumento">
+          <DataField>NumeroDocumento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Anio">
+          <DataField>Anio</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Mes">
+          <DataField>Mes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IdVendedor">
+          <DataField>IdVendedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdCliente">
+          <DataField>IdCliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NombreCliente">
+          <DataField>NombreCliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdAlmacen">
+          <DataField>IdAlmacen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalMN">
+          <DataField>ValorTotalMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalUS">
+          <DataField>ValorTotalUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteIGVMN">
+          <DataField>ImporteIGVMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteIGVUS">
+          <DataField>ImporteIGVUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteTotalmn">
+          <DataField>ImporteTotalmn</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteTotalUS">
+          <DataField>ImporteTotalUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <fyi:Rows xmlns:fyi="http://www.fyireporting.com/schemas">
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FI</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0000001    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20392527916       </IdCliente>
+          <NombreCliente>ACHE INVESTMENT E.I.R.L.                                                        </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1837.500000</ValorTotalMN>
+          <ValorTotalUS>525.00000000000000</ValorTotalUS>
+          <ImporteIGVMN>0.000000</ImporteIGVMN>
+          <ImporteIGVUS>0.00000000000000</ImporteIGVUS>
+          <ImporteTotalmn>1837.500000</ImporteTotalmn>
+          <ImporteTotalUS>525.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0019748    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516986655       </IdCliente>
+          <NombreCliente>A &amp; Q AUTOMATIZACION Y CONTROL S.A.C.                                           </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>432.200000</ValorTotalMN>
+          <ValorTotalUS>133.39506172839506</ValorTotalUS>
+          <ImporteIGVMN>77.800000</ImporteIGVMN>
+          <ImporteIGVUS>24.01234567901234</ImporteIGVUS>
+          <ImporteTotalmn>510.000000</ImporteTotalmn>
+          <ImporteTotalUS>157.40740740740740</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021214    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3855.930000</ValorTotalMN>
+          <ValorTotalUS>1101.69428571428572</ValorTotalUS>
+          <ImporteIGVMN>694.070000</ImporteIGVMN>
+          <ImporteIGVUS>198.30571428571428</ImporteIGVUS>
+          <ImporteTotalmn>4550.000000</ImporteTotalmn>
+          <ImporteTotalUS>1300.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021215    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1525.420000</ValorTotalMN>
+          <ValorTotalUS>435.83428571428571</ValorTotalUS>
+          <ImporteIGVMN>274.580000</ImporteIGVMN>
+          <ImporteIGVUS>78.45142857142857</ImporteIGVUS>
+          <ImporteTotalmn>1800.000000</ImporteTotalmn>
+          <ImporteTotalUS>514.28571428571428</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021216    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20449429924       </IdCliente>
+          <NombreCliente>A &amp; L IMPORTACIONES GENERALES E.I.R.L.                                          </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>6101.690000</ValorTotalMN>
+          <ValorTotalUS>1743.34000000000000</ValorTotalUS>
+          <ImporteIGVMN>1098.310000</ImporteIGVMN>
+          <ImporteIGVUS>313.80285714285714</ImporteIGVUS>
+          <ImporteTotalmn>7200.000000</ImporteTotalmn>
+          <ImporteTotalUS>2057.14285714285714</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021217    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>508.470000</ValorTotalMN>
+          <ValorTotalUS>158.89687500000000</ValorTotalUS>
+          <ImporteIGVMN>91.530000</ImporteIGVMN>
+          <ImporteIGVUS>28.60312500000000</ImporteIGVUS>
+          <ImporteTotalmn>600.000000</ImporteTotalmn>
+          <ImporteTotalUS>187.50000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021218    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>889.830000</ValorTotalMN>
+          <ValorTotalUS>274.63888888888889</ValorTotalUS>
+          <ImporteIGVMN>160.170000</ImporteIGVMN>
+          <ImporteIGVUS>49.43518518518518</ImporteIGVUS>
+          <ImporteTotalmn>1050.000000</ImporteTotalmn>
+          <ImporteTotalUS>324.07407407407407</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021219    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3813.560000</ValorTotalMN>
+          <ValorTotalUS>1177.02469135802469</ValorTotalUS>
+          <ImporteIGVMN>686.440000</ImporteIGVMN>
+          <ImporteIGVUS>211.86419753086419</ImporteIGVUS>
+          <ImporteTotalmn>4500.000000</ImporteTotalmn>
+          <ImporteTotalUS>1388.88888888888888</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021220    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1694.920000</ValorTotalMN>
+          <ValorTotalUS>523.12345679012346</ValorTotalUS>
+          <ImporteIGVMN>305.080000</ImporteIGVMN>
+          <ImporteIGVUS>94.16049382716049</ImporteIGVUS>
+          <ImporteTotalmn>2000.000000</ImporteTotalmn>
+          <ImporteTotalUS>617.28395061728395</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>NA</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0011017    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>-847.460000</ValorTotalMN>
+          <ValorTotalUS>-261.56172839451768</ValorTotalUS>
+          <ImporteIGVMN>-152.540000</ImporteIGVMN>
+          <ImporteIGVUS>-47.08024691348232</ImporteIGVUS>
+          <ImporteTotalmn>-1000.000000</ImporteTotalmn>
+          <ImporteTotalUS>-308.64197530800000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FI</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0000001    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20392527916       </IdCliente>
+          <NombreCliente>ACHE INVESTMENT E.I.R.L.                                                        </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1837.500000</ValorTotalMN>
+          <ValorTotalUS>525.00000000000000</ValorTotalUS>
+          <ImporteIGVMN>0.000000</ImporteIGVMN>
+          <ImporteIGVUS>0.00000000000000</ImporteIGVUS>
+          <ImporteTotalmn>1837.500000</ImporteTotalmn>
+          <ImporteTotalUS>525.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0019748    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516986655       </IdCliente>
+          <NombreCliente>A &amp; Q AUTOMATIZACION Y CONTROL S.A.C.                                           </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>432.200000</ValorTotalMN>
+          <ValorTotalUS>133.39506172839506</ValorTotalUS>
+          <ImporteIGVMN>77.800000</ImporteIGVMN>
+          <ImporteIGVUS>24.01234567901234</ImporteIGVUS>
+          <ImporteTotalmn>510.000000</ImporteTotalmn>
+          <ImporteTotalUS>157.40740740740740</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021214    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3855.930000</ValorTotalMN>
+          <ValorTotalUS>1101.69428571428572</ValorTotalUS>
+          <ImporteIGVMN>694.070000</ImporteIGVMN>
+          <ImporteIGVUS>198.30571428571428</ImporteIGVUS>
+          <ImporteTotalmn>4550.000000</ImporteTotalmn>
+          <ImporteTotalUS>1300.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021215    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1525.420000</ValorTotalMN>
+          <ValorTotalUS>435.83428571428571</ValorTotalUS>
+          <ImporteIGVMN>274.580000</ImporteIGVMN>
+          <ImporteIGVUS>78.45142857142857</ImporteIGVUS>
+          <ImporteTotalmn>1800.000000</ImporteTotalmn>
+          <ImporteTotalUS>514.28571428571428</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021216    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20449429924       </IdCliente>
+          <NombreCliente>A &amp; L IMPORTACIONES GENERALES E.I.R.L.                                          </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>6101.690000</ValorTotalMN>
+          <ValorTotalUS>1743.34000000000000</ValorTotalUS>
+          <ImporteIGVMN>1098.310000</ImporteIGVMN>
+          <ImporteIGVUS>313.80285714285714</ImporteIGVUS>
+          <ImporteTotalmn>7200.000000</ImporteTotalmn>
+          <ImporteTotalUS>2057.14285714285714</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021217    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>508.470000</ValorTotalMN>
+          <ValorTotalUS>158.89687500000000</ValorTotalUS>
+          <ImporteIGVMN>91.530000</ImporteIGVMN>
+          <ImporteIGVUS>28.60312500000000</ImporteIGVUS>
+          <ImporteTotalmn>600.000000</ImporteTotalmn>
+          <ImporteTotalUS>187.50000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021218    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>889.830000</ValorTotalMN>
+          <ValorTotalUS>274.63888888888889</ValorTotalUS>
+          <ImporteIGVMN>160.170000</ImporteIGVMN>
+          <ImporteIGVUS>49.43518518518518</ImporteIGVUS>
+          <ImporteTotalmn>1050.000000</ImporteTotalmn>
+          <ImporteTotalUS>324.07407407407407</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021219    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3813.560000</ValorTotalMN>
+          <ValorTotalUS>1177.02469135802469</ValorTotalUS>
+          <ImporteIGVMN>686.440000</ImporteIGVMN>
+          <ImporteIGVUS>211.86419753086419</ImporteIGVUS>
+          <ImporteTotalmn>4500.000000</ImporteTotalmn>
+          <ImporteTotalUS>1388.88888888888888</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021220    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1694.920000</ValorTotalMN>
+          <ValorTotalUS>523.12345679012346</ValorTotalUS>
+          <ImporteIGVMN>305.080000</ImporteIGVMN>
+          <ImporteIGVUS>94.16049382716049</ImporteIGVUS>
+          <ImporteTotalmn>2000.000000</ImporteTotalmn>
+          <ImporteTotalUS>617.28395061728395</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>NA</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0011017    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>-847.460000</ValorTotalMN>
+          <ValorTotalUS>-261.56172839451768</ValorTotalUS>
+          <ImporteIGVMN>-152.540000</ImporteIGVMN>
+          <ImporteIGVUS>-47.08024691348232</ImporteIGVUS>
+          <ImporteTotalmn>-1000.000000</ImporteTotalmn>
+          <ImporteTotalUS>-308.64197530800000</ImporteTotalUS>
+        </Row>
+      </fyi:Rows>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>53.5pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox8">
+        <Height>17.28pt</Height>
+        <Width>611.32pt</Width>
+        <Value>REPORTE DE VENTAS POR VENDEDOR</Value>
+        <ZIndex>1</ZIndex>
+        <Left>1.35pt</Left>
+        <Top>9.03pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Center</TextAlign>
+          <FontSize>14.pt</FontSize>
+          <FontStyle>Normal</FontStyle>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <Height>15.74pt</Height>
+        <Width>613.53pt</Width>
+        <Value>=" Del " &amp; Parameters!FechaInicial.Value &amp; " Al " &amp; Parameters!FechaFinal.Value</Value>
+        <ZIndex>1</ZIndex>
+        <Left>1.50pt</Left>
+        <Top>29.10pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Center</TextAlign>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </PageHeader>
+  <Body>
+    <Height>84.3pt</Height>
+    <ReportItems>
+      <Matrix Name="Matrix1">
+        <DataSetName>conexion</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="Textbox1">
+              <Value>Corner</Value>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <BorderWidth>
+                  <Left>1pt</Left>
+                  <Right>1pt</Right>
+                  <Top>1pt</Top>
+                  <Bottom>1pt</Bottom>
+                </BorderWidth>
+                <FontWeight>Normal</FontWeight>
+                <BorderColor />
+              </Style>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>12pt</Height>
+            <DynamicColumns>
+              <Grouping Name="DynamicColumnsGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Anio.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="Textbox2">
+                  <Value>=Fields!Anio.Value</Value>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <BorderColor />
+                    <BorderWidth />
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                  <HideDuplicates>
+                  </HideDuplicates>
+                  <CanShrink>false</CanShrink>
+                  <CanGrow>false</CanGrow>
+                </Textbox>
+              </ReportItems>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="Textbox3">
+                    <Value>Total General</Value>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <BorderColor />
+                      <BorderWidth />
+                      <FontWeight>Bold</FontWeight>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+            </DynamicColumns>
+          </ColumnGrouping>
+          <ColumnGrouping>
+            <Height>12pt</Height>
+            <DynamicColumns>
+              <Grouping Name="DynamicColumnsGroup2">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Mes.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="Textbox4">
+                  <Value>=ucase(monthname(Fields!Mes.Value))</Value>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <BorderColor />
+                    <BorderWidth />
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Textbox>
+              </ReportItems>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="Textbox5">
+                    <Value>Total Periodo</Value>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <BorderColor />
+                      <BorderWidth />
+                      <TextAlign>Center</TextAlign>
+                      <FontStyle>Italic</FontStyle>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+            </DynamicColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>164.0pt</Width>
+            <DynamicRows>
+              <Grouping Name="DynamicRowsGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Nombre.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="Textbox6">
+                  <Value>=Fields!Nombre.Value</Value>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                  </Style>
+                </Textbox>
+              </ReportItems>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="Textbox7">
+                    <Value>Total Ventas</Value>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <BorderColor />
+                      <BorderWidth />
+                      <FontWeight>Bold</FontWeight>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>75.3pt</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>12pt</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="Textbox10">
+                    <Value>=Sum(Fields!ValorTotalMN.Value)</Value>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <BorderColor />
+                      <BorderWidth />
+                      <Format>#,##0.00</Format>
+                    </Style>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+        <Left>16.4pt</Left>
+        <Top>17.6pt</Top>
+        <CellDataElementOutput>Output</CellDataElementOutput>
+      </Matrix>
+    </ReportItems>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>14pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <DataSources>
+    <DataSource Name="conexion">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=JMCRPC;Initial Catalog=COM2053245226116;User ID=sa;pwd=Bajo2013</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <ReportParameters>
+    <ReportParameter Name="FechaInicial">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>FechaInicial</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FechaFinal">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>FechaFinal</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+<Language>es-PE</Language>
+
+</Report>

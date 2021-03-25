@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://service.sunat.gob.pe" targetNamespace="http://service.sunat.gob.pe" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="validaCDPcriteriosResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="cdpvalidado" type="ns0:statusResponse" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="statusResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="content" type="xsd:base64Binary" />
+      <xsd:element minOccurs="0" name="statusCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="statusMessage" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="verificaCPEarchivo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+      <xsd:element minOccurs="0" name="archivo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="verificaCPEarchivoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="archivoverificado" type="ns0:statusResponse" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="validaCDPcriterios">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="rucEmisor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoCDP" type="xsd:string" />
+      <xsd:element minOccurs="0" name="serieCDP" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroCDP" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocIdReceptor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroDocIdReceptor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaEmision" type="xsd:string" />
+      <xsd:element minOccurs="0" name="importeTotal" type="xsd:double" />
+      <xsd:element minOccurs="0" name="nroAutorizacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="validaCDPcriteriosResponse" type="ns0:validaCDPcriteriosResponse" />
+  <xsd:element name="verificaCPEarchivo" type="ns0:verificaCPEarchivo" />
+  <xsd:element name="verificaCPEarchivoResponse" type="ns0:verificaCPEarchivoResponse" />
+  <xsd:element name="validaCDPcriterios" type="ns0:validaCDPcriterios" />
+</xsd:schema>

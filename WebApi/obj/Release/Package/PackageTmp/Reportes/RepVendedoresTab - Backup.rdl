@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>8.5in</PageHeight>
+  <PageWidth>11in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="conexion">
+      <Query>
+        <DataSourceName>conexion</DataSourceName>
+        <CommandText>SELECT idAgencia,IdTipoDocumento,Serie,NumeroDocumento,YEAR(FechaDocumento)as Anio,MONTH(FechaDocumento) as Mes,
+v.IdVendedor,v.Nombre,IdCliente,NombreCliente,IdAlmacen,ImporteTotalmn-ImporteIGVmn as ValorTotalMN,ImporteTotalUS-ImporteIGVUS as ValorTotalUS,ImporteIGVMN,ImporteIGVUS,ImporteTotalmn,ImporteTotalUS FROM COMPROBANTE C INNER JOIN VENDEDOR V
+ON C.IdVendedor=V.IdVendedor</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="idAgencia">
+          <DataField>idAgencia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdTipoDocumento">
+          <DataField>IdTipoDocumento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Serie">
+          <DataField>Serie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroDocumento">
+          <DataField>NumeroDocumento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Anio">
+          <DataField>Anio</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Mes">
+          <DataField>Mes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IdVendedor">
+          <DataField>IdVendedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdCliente">
+          <DataField>IdCliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NombreCliente">
+          <DataField>NombreCliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdAlmacen">
+          <DataField>IdAlmacen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalMN">
+          <DataField>ValorTotalMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalUS">
+          <DataField>ValorTotalUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteIGVMN">
+          <DataField>ImporteIGVMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteIGVUS">
+          <DataField>ImporteIGVUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteTotalmn">
+          <DataField>ImporteTotalmn</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteTotalUS">
+          <DataField>ImporteTotalUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <fyi:Rows xmlns:fyi="http://www.fyireporting.com/schemas">
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FI</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0000001    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20392527916       </IdCliente>
+          <NombreCliente>ACHE INVESTMENT E.I.R.L.                                                        </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1837.500000</ValorTotalMN>
+          <ValorTotalUS>525.00000000000000</ValorTotalUS>
+          <ImporteIGVMN>0.000000</ImporteIGVMN>
+          <ImporteIGVUS>0.00000000000000</ImporteIGVUS>
+          <ImporteTotalmn>1837.500000</ImporteTotalmn>
+          <ImporteTotalUS>525.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0019748    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516986655       </IdCliente>
+          <NombreCliente>A &amp; Q AUTOMATIZACION Y CONTROL S.A.C.                                           </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>432.200000</ValorTotalMN>
+          <ValorTotalUS>133.39506172839506</ValorTotalUS>
+          <ImporteIGVMN>77.800000</ImporteIGVMN>
+          <ImporteIGVUS>24.01234567901234</ImporteIGVUS>
+          <ImporteTotalmn>510.000000</ImporteTotalmn>
+          <ImporteTotalUS>157.40740740740740</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021214    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3855.930000</ValorTotalMN>
+          <ValorTotalUS>1101.69428571428572</ValorTotalUS>
+          <ImporteIGVMN>694.070000</ImporteIGVMN>
+          <ImporteIGVUS>198.30571428571428</ImporteIGVUS>
+          <ImporteTotalmn>4550.000000</ImporteTotalmn>
+          <ImporteTotalUS>1300.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021215    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1525.420000</ValorTotalMN>
+          <ValorTotalUS>435.83428571428571</ValorTotalUS>
+          <ImporteIGVMN>274.580000</ImporteIGVMN>
+          <ImporteIGVUS>78.45142857142857</ImporteIGVUS>
+          <ImporteTotalmn>1800.000000</ImporteTotalmn>
+          <ImporteTotalUS>514.28571428571428</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021216    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20449429924       </IdCliente>
+          <NombreCliente>A &amp; L IMPORTACIONES GENERALES E.I.R.L.                                          </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>6101.690000</ValorTotalMN>
+          <ValorTotalUS>1743.34000000000000</ValorTotalUS>
+          <ImporteIGVMN>1098.310000</ImporteIGVMN>
+          <ImporteIGVUS>313.80285714285714</ImporteIGVUS>
+          <ImporteTotalmn>7200.000000</ImporteTotalmn>
+          <ImporteTotalUS>2057.14285714285714</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021217    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>508.470000</ValorTotalMN>
+          <ValorTotalUS>158.89687500000000</ValorTotalUS>
+          <ImporteIGVMN>91.530000</ImporteIGVMN>
+          <ImporteIGVUS>28.60312500000000</ImporteIGVUS>
+          <ImporteTotalmn>600.000000</ImporteTotalmn>
+          <ImporteTotalUS>187.50000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021218    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>889.830000</ValorTotalMN>
+          <ValorTotalUS>274.63888888888889</ValorTotalUS>
+          <ImporteIGVMN>160.170000</ImporteIGVMN>
+          <ImporteIGVUS>49.43518518518518</ImporteIGVUS>
+          <ImporteTotalmn>1050.000000</ImporteTotalmn>
+          <ImporteTotalUS>324.07407407407407</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021219    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3813.560000</ValorTotalMN>
+          <ValorTotalUS>1177.02469135802469</ValorTotalUS>
+          <ImporteIGVMN>686.440000</ImporteIGVMN>
+          <ImporteIGVUS>211.86419753086419</ImporteIGVUS>
+          <ImporteTotalmn>4500.000000</ImporteTotalmn>
+          <ImporteTotalUS>1388.88888888888888</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021220    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1694.920000</ValorTotalMN>
+          <ValorTotalUS>523.12345679012346</ValorTotalUS>
+          <ImporteIGVMN>305.080000</ImporteIGVMN>
+          <ImporteIGVUS>94.16049382716049</ImporteIGVUS>
+          <ImporteTotalmn>2000.000000</ImporteTotalmn>
+          <ImporteTotalUS>617.28395061728395</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>NA</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0011017    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>-847.460000</ValorTotalMN>
+          <ValorTotalUS>-261.56172839451768</ValorTotalUS>
+          <ImporteIGVMN>-152.540000</ImporteIGVMN>
+          <ImporteIGVUS>-47.08024691348232</ImporteIGVUS>
+          <ImporteTotalmn>-1000.000000</ImporteTotalmn>
+          <ImporteTotalUS>-308.64197530800000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FI</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0000001    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20392527916       </IdCliente>
+          <NombreCliente>ACHE INVESTMENT E.I.R.L.                                                        </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1837.500000</ValorTotalMN>
+          <ValorTotalUS>525.00000000000000</ValorTotalUS>
+          <ImporteIGVMN>0.000000</ImporteIGVMN>
+          <ImporteIGVUS>0.00000000000000</ImporteIGVUS>
+          <ImporteTotalmn>1837.500000</ImporteTotalmn>
+          <ImporteTotalUS>525.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0019748    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516986655       </IdCliente>
+          <NombreCliente>A &amp; Q AUTOMATIZACION Y CONTROL S.A.C.                                           </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>432.200000</ValorTotalMN>
+          <ValorTotalUS>133.39506172839506</ValorTotalUS>
+          <ImporteIGVMN>77.800000</ImporteIGVMN>
+          <ImporteIGVUS>24.01234567901234</ImporteIGVUS>
+          <ImporteTotalmn>510.000000</ImporteTotalmn>
+          <ImporteTotalUS>157.40740740740740</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021214    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3855.930000</ValorTotalMN>
+          <ValorTotalUS>1101.69428571428572</ValorTotalUS>
+          <ImporteIGVMN>694.070000</ImporteIGVMN>
+          <ImporteIGVUS>198.30571428571428</ImporteIGVUS>
+          <ImporteTotalmn>4550.000000</ImporteTotalmn>
+          <ImporteTotalUS>1300.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021215    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1525.420000</ValorTotalMN>
+          <ValorTotalUS>435.83428571428571</ValorTotalUS>
+          <ImporteIGVMN>274.580000</ImporteIGVMN>
+          <ImporteIGVUS>78.45142857142857</ImporteIGVUS>
+          <ImporteTotalmn>1800.000000</ImporteTotalmn>
+          <ImporteTotalUS>514.28571428571428</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021216    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20449429924       </IdCliente>
+          <NombreCliente>A &amp; L IMPORTACIONES GENERALES E.I.R.L.                                          </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>6101.690000</ValorTotalMN>
+          <ValorTotalUS>1743.34000000000000</ValorTotalUS>
+          <ImporteIGVMN>1098.310000</ImporteIGVMN>
+          <ImporteIGVUS>313.80285714285714</ImporteIGVUS>
+          <ImporteTotalmn>7200.000000</ImporteTotalmn>
+          <ImporteTotalUS>2057.14285714285714</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021217    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>508.470000</ValorTotalMN>
+          <ValorTotalUS>158.89687500000000</ValorTotalUS>
+          <ImporteIGVMN>91.530000</ImporteIGVMN>
+          <ImporteIGVUS>28.60312500000000</ImporteIGVUS>
+          <ImporteTotalmn>600.000000</ImporteTotalmn>
+          <ImporteTotalUS>187.50000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021218    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>889.830000</ValorTotalMN>
+          <ValorTotalUS>274.63888888888889</ValorTotalUS>
+          <ImporteIGVMN>160.170000</ImporteIGVMN>
+          <ImporteIGVUS>49.43518518518518</ImporteIGVUS>
+          <ImporteTotalmn>1050.000000</ImporteTotalmn>
+          <ImporteTotalUS>324.07407407407407</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021219    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3813.560000</ValorTotalMN>
+          <ValorTotalUS>1177.02469135802469</ValorTotalUS>
+          <ImporteIGVMN>686.440000</ImporteIGVMN>
+          <ImporteIGVUS>211.86419753086419</ImporteIGVUS>
+          <ImporteTotalmn>4500.000000</ImporteTotalmn>
+          <ImporteTotalUS>1388.88888888888888</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021220    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1694.920000</ValorTotalMN>
+          <ValorTotalUS>523.12345679012346</ValorTotalUS>
+          <ImporteIGVMN>305.080000</ImporteIGVMN>
+          <ImporteIGVUS>94.16049382716049</ImporteIGVUS>
+          <ImporteTotalmn>2000.000000</ImporteTotalmn>
+          <ImporteTotalUS>617.28395061728395</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>NA</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0011017    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>-847.460000</ValorTotalMN>
+          <ValorTotalUS>-261.56172839451768</ValorTotalUS>
+          <ImporteIGVMN>-152.540000</ImporteIGVMN>
+          <ImporteIGVUS>-47.08024691348232</ImporteIGVUS>
+          <ImporteTotalmn>-1000.000000</ImporteTotalmn>
+          <ImporteTotalUS>-308.64197530800000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FI</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0000001    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20392527916       </IdCliente>
+          <NombreCliente>ACHE INVESTMENT E.I.R.L.                                                        </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1837.500000</ValorTotalMN>
+          <ValorTotalUS>525.00000000000000</ValorTotalUS>
+          <ImporteIGVMN>0.000000</ImporteIGVMN>
+          <ImporteIGVUS>0.00000000000000</ImporteIGVUS>
+          <ImporteTotalmn>1837.500000</ImporteTotalmn>
+          <ImporteTotalUS>525.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0019748    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516986655       </IdCliente>
+          <NombreCliente>A &amp; Q AUTOMATIZACION Y CONTROL S.A.C.                                           </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>432.200000</ValorTotalMN>
+          <ValorTotalUS>133.39506172839506</ValorTotalUS>
+          <ImporteIGVMN>77.800000</ImporteIGVMN>
+          <ImporteIGVUS>24.01234567901234</ImporteIGVUS>
+          <ImporteTotalmn>510.000000</ImporteTotalmn>
+          <ImporteTotalUS>157.40740740740740</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021214    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3855.930000</ValorTotalMN>
+          <ValorTotalUS>1101.69428571428572</ValorTotalUS>
+          <ImporteIGVMN>694.070000</ImporteIGVMN>
+          <ImporteIGVUS>198.30571428571428</ImporteIGVUS>
+          <ImporteTotalmn>4550.000000</ImporteTotalmn>
+          <ImporteTotalUS>1300.00000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021215    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1525.420000</ValorTotalMN>
+          <ValorTotalUS>435.83428571428571</ValorTotalUS>
+          <ImporteIGVMN>274.580000</ImporteIGVMN>
+          <ImporteIGVUS>78.45142857142857</ImporteIGVUS>
+          <ImporteTotalmn>1800.000000</ImporteTotalmn>
+          <ImporteTotalUS>514.28571428571428</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021216    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20449429924       </IdCliente>
+          <NombreCliente>A &amp; L IMPORTACIONES GENERALES E.I.R.L.                                          </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>6101.690000</ValorTotalMN>
+          <ValorTotalUS>1743.34000000000000</ValorTotalUS>
+          <ImporteIGVMN>1098.310000</ImporteIGVMN>
+          <ImporteIGVUS>313.80285714285714</ImporteIGVUS>
+          <ImporteTotalmn>7200.000000</ImporteTotalmn>
+          <ImporteTotalUS>2057.14285714285714</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021217    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>4</Mes>
+          <IdVendedor>10</IdVendedor>
+          <Nombre>FERNANDO</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>508.470000</ValorTotalMN>
+          <ValorTotalUS>158.89687500000000</ValorTotalUS>
+          <ImporteIGVMN>91.530000</ImporteIGVMN>
+          <ImporteIGVUS>28.60312500000000</ImporteIGVUS>
+          <ImporteTotalmn>600.000000</ImporteTotalmn>
+          <ImporteTotalUS>187.50000000000000</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021218    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20532519609       </IdCliente>
+          <NombreCliente>3V INVERSIONES E.I.R.L.                                                         </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>889.830000</ValorTotalMN>
+          <ValorTotalUS>274.63888888888889</ValorTotalUS>
+          <ImporteIGVMN>160.170000</ImporteIGVMN>
+          <ImporteIGVUS>49.43518518518518</ImporteIGVUS>
+          <ImporteTotalmn>1050.000000</ImporteTotalmn>
+          <ImporteTotalUS>324.07407407407407</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021219    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20428617151       </IdCliente>
+          <NombreCliente>A &amp; E ARCE S.R.L                                                                </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>3813.560000</ValorTotalMN>
+          <ValorTotalUS>1177.02469135802469</ValorTotalUS>
+          <ImporteIGVMN>686.440000</ImporteIGVMN>
+          <ImporteIGVUS>211.86419753086419</ImporteIGVUS>
+          <ImporteTotalmn>4500.000000</ImporteTotalmn>
+          <ImporteTotalUS>1388.88888888888888</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>FT</IdTipoDocumento>
+          <Serie>0004</Serie>
+          <NumeroDocumento>0021220    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>03</IdVendedor>
+          <Nombre>ROXANA</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>1694.920000</ValorTotalMN>
+          <ValorTotalUS>523.12345679012346</ValorTotalUS>
+          <ImporteIGVMN>305.080000</ImporteIGVMN>
+          <ImporteIGVUS>94.16049382716049</ImporteIGVUS>
+          <ImporteTotalmn>2000.000000</ImporteTotalmn>
+          <ImporteTotalUS>617.28395061728395</ImporteTotalUS>
+        </Row>
+        <Row>
+          <idAgencia>TA01</idAgencia>
+          <IdTipoDocumento>NA</IdTipoDocumento>
+          <Serie>0001</Serie>
+          <NumeroDocumento>0011017    </NumeroDocumento>
+          <Anio>2016</Anio>
+          <Mes>5</Mes>
+          <IdVendedor>02</IdVendedor>
+          <Nombre>NANCY</Nombre>
+          <IdCliente>20516616131       </IdCliente>
+          <NombreCliente>1 PUNTO 618 S.A..C.                                                             </NombreCliente>
+          <IdAlmacen>T001</IdAlmacen>
+          <ValorTotalMN>-847.460000</ValorTotalMN>
+          <ValorTotalUS>-261.56172839451768</ValorTotalUS>
+          <ImporteIGVMN>-152.540000</ImporteIGVMN>
+          <ImporteIGVUS>-47.08024691348232</ImporteIGVUS>
+          <ImporteTotalmn>-1000.000000</ImporteTotalmn>
+          <ImporteTotalUS>-308.64197530800000</ImporteTotalUS>
+        </Row>
+      </fyi:Rows>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>66.3pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox6">
+        <Height>23.30pt</Height>
+        <Width>757.98pt</Width>
+        <Value>REPORTE DE VENTAS POR VENDEDOR</Value>
+        <Left>0.80pt</Left>
+        <Top>16.30pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Center</TextAlign>
+          <FontSize>15pt</FontSize>
+          <FontWeight>Bold</FontWeight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <Height>16.51pt</Height>
+        <Width>756.64pt</Width>
+        <Value>=" Del " &amp; Parameters!FechaInicial.Value &amp; " Al " &amp; Parameters!FechaFinal.Value</Value>
+        <Left>0.00pt</Left>
+        <Top>39.60pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Center</TextAlign>
+          <FontWeight>Bold</FontWeight>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </PageHeader>
+  <Body>
+    <ReportItems>
+      <Table Name="Table1">
+        <DataSetName>conexion</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>19.8pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>34.1pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>29.9pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>36.5pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>62.5pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>80.3pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>170.4pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>56.5pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>59.3pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>71.5pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>67.2pt</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>24.4pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox1">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox2">
+                      <Value>Alm</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox3">
+                      <Value>Td</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox4">
+                      <Value>Serie</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox5">
+                      <Value>Numero</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox8">
+                      <Value>Nombre</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox9">
+                      <Value>IdCliente</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox10">
+                      <Value>NombreCliente</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox12">
+                      <Value>Valor Total MN</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox13">
+                      <Value>Valor Total US</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox16">
+                      <Value>Importe Total MN</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox17">
+                      <Value>Importe Total US</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableGroups>
+          <TableGroup>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <Height>12pt</Height>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>12</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="Textbox18">
+                          <Value>=Fields!IdVendedor.Value &amp; " - " &amp; Fields!Nombre.Value</Value>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <FontWeight>Bold</FontWeight>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                          <HideDuplicates>conexion</HideDuplicates>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                </TableRow>
+              </TableRows>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </Header>
+            <Footer>
+              <TableRows>
+                <TableRow>
+                  <Height>12pt</Height>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox19">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox20">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox21">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox22">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox23">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox26">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox27">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox28">
+                          <Value>Total Vendedor</Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox30">
+                          <Value>=sum(Fields!ValorTotalMN.Value)</Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                            <Format>#,##0.00</Format>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox31">
+                          <Value>=sum(Fields!ValorTotalUS.Value)</Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                            <Format>#,##0.00</Format>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox34">
+                          <Value>=sum(Fields!ImporteTotalmn.Value)</Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                            <Format>#,##0.00</Format>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox35">
+                          <Value>=sum(Fields!ImporteTotalUS.Value)</Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <BorderColor />
+                            <BorderWidth />
+                            <Format>#,##0.00</Format>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                </TableRow>
+              </TableRows>
+            </Footer>
+            <Grouping Name="IdVendedorGroup">
+              <GroupExpressions>
+                <GroupExpression>=Fields!IdVendedor.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>12pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox36">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="idAgencia">
+                      <Value>=Fields!IdAlmacen.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="IdTipoDocumento">
+                      <Value>=Fields!IdTipoDocumento.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Serie">
+                      <Value>=Fields!Serie.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NumeroDocumento">
+                      <Value>=Fields!NumeroDocumento.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Nombre">
+                      <Value>=Fields!Nombre.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="IdCliente">
+                      <Value>=Fields!IdCliente.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NombreCliente">
+                      <Value>=Fields!NombreCliente.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ValorTotalMN">
+                      <Value>=Fields!ValorTotalMN.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>2pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ValorTotalUS">
+                      <Value>=Fields!ValorTotalUS.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>0pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ImporteTotalmn">
+                      <Value>=Fields!ImporteTotalmn.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>2pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ImporteTotalUS">
+                      <Value>=Fields!ImporteTotalUS.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>2pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+      </Table>
+    </ReportItems>
+    <Height>72pt</Height>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>14pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <DataSources>
+    <DataSource Name="conexion">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=JMCRPC;Initial Catalog=COM2053245226116;User ID=sa;pwd=Bajo2013</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <ReportParameters>
+    <ReportParameter Name="FechaInicial">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>FechaInicial</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FechaFinal">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>FechaFinal</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Language>es-PE</Language>
+ </Report>

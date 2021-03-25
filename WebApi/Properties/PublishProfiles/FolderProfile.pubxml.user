@@ -1,0 +1,2036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\webapi3</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include=".editorconfig">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/CapaDatos.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/CapaDatos.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/CapaEstilo.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/CapaEstilo.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/CapaNegocios.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/CapaNegocios.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/CloudinaryDotNet.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/ClsFtp.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/ClsSigmaWs.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/ClsSigmaWs.dll.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/ClsSigmaWs.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/eFacturacionCls.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/eFacturacionCls.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/eFacturacionCls21.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/eFacturacionCls21.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/efacturacionClsNuevo.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/efacturacionClsNuevo.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.resources.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.WebHost.resources.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Gma.QrCodeNet.Encoding.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Ionic.Zip.dll">
+      <publishTime>06/08/2011 21:59:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/09/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WinForms.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Services3.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/QRCoder.dll">
+      <publishTime>03/10/2018 21:54:19</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>08/08/2018 12:18:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>08/08/2018 12:18:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>08/08/2018 12:09:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>05/12/2017 09:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>05/12/2017 09:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>05/11/2016 18:55:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>05/11/2016 18:55:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>05/11/2016 18:55:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>05/11/2016 18:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>05/11/2016 18:55:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>05/11/2016 18:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>05/11/2016 18:56:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>05/11/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>05/11/2016 18:56:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>05/11/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>05/11/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>05/11/2016 18:56:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>05/11/2016 18:56:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>05/11/2016 18:57:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>05/11/2016 18:57:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>05/11/2016 18:57:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>05/11/2016 18:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>05/11/2016 18:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>05/11/2016 18:57:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>05/11/2016 18:57:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>05/11/2016 18:57:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>05/11/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>05/11/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>05/11/2016 18:57:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>05/11/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>08/08/2018 12:18:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>08/08/2018 12:09:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/08/2018 12:18:16</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>05/11/2016 04:57:00</publishTime>
+    </File>
+    <File Include="bin/System.Text.Encodings.Web.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/WebApi.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/WebApi.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="imagenes/logo.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/Backup/Reportes.sln">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Backup1/Reportes.sln">
+      <publishTime>07/11/2020 11:10:48</publishTime>
+    </File>
+    <File Include="Reportes/Backup2/Reportes.sln">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/build.obj">
+      <publishTime>02/12/2020 16:45:44</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/conexion.rds">
+      <publishTime>07/11/2020 09:23:15</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/conexion.rsd">
+      <publishTime>07/11/2020 09:23:15</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Copia de RepMovimientoN.rdl">
+      <publishTime>07/11/2020 11:10:48</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Copia de RepPendientesEntrega.rdl">
+      <publishTime>07/11/2020 09:23:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/CtasxPagarUbicacion.rdl">
+      <publishTime>07/11/2020 11:10:50</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/CuentasPorPagar.rdl">
+      <publishTime>07/11/2020 11:10:50</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/DespachoDevoluciones.rdl">
+      <publishTime>02/12/2020 16:45:42</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/DespachoGuia.rdl">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/DespachoNotadeVenta.rdl">
+      <publishTime>02/12/2020 16:45:43</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/DespachoResumen.rdl">
+      <publishTime>02/12/2020 16:45:44</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/DespachoSaldoGuia.rdl">
+      <publishTime>02/12/2020 16:45:44</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/DetalleDeRegCompras.rdl">
+      <publishTime>07/11/2020 09:23:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EGuiaRemision.rdl">
+      <publishTime>07/11/2020 11:10:51</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoice.rdl">
+      <publishTime>07/11/2020 11:10:51</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogo.rdl">
+      <publishTime>07/11/2020 11:10:51</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogo1.rdl">
+      <publishTime>07/11/2020 11:10:54</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogoDua.rdl">
+      <publishTime>07/11/2020 11:10:54</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogoGrifo.rdl">
+      <publishTime>07/11/2020 11:10:55</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogoLibreria.rdl">
+      <publishTime>07/11/2020 11:10:55</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogoLibreriaAcuario.rdl">
+      <publishTime>07/11/2020 11:10:56</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogoPercepcion.rdl">
+      <publishTime>07/11/2020 11:10:56</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogoValor.rdl">
+      <publishTime>07/11/2020 11:10:57</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogo_Aduana.rdl">
+      <publishTime>07/11/2020 11:10:52</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogo_Aduana_Olzza.rdl">
+      <publishTime>07/11/2020 11:10:53</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogo_Conectatec.rdl">
+      <publishTime>07/11/2020 09:23:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLogo_CPE.rdl">
+      <publishTime>07/11/2020 11:10:53</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceLote.rdl">
+      <publishTime>07/11/2020 11:10:57</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceTicket.rdl">
+      <publishTime>07/11/2020 11:10:58</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceTicketHotel01.rdl">
+      <publishTime>07/11/2020 11:10:59</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceTicket_CPE.rdl">
+      <publishTime>07/11/2020 11:10:58</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceTicket_ferreteria.rdl">
+      <publishTime>07/11/2020 11:10:58</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceTicket_Serie.rdl">
+      <publishTime>07/11/2020 11:10:58</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EInvoiceTicket_Zofra.rdl">
+      <publishTime>07/11/2020 11:10:59</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ENotaCredito.rdl">
+      <publishTime>07/11/2020 11:11:00</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ENotaCreditoLogo.rdl">
+      <publishTime>07/11/2020 11:11:00</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ENotaCreditoLogoDua.rdl">
+      <publishTime>07/11/2020 11:11:00</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ENotaCreditoLogoLibreria.rdl">
+      <publishTime>07/11/2020 11:11:01</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ENotaDebito.rdl">
+      <publishTime>07/11/2020 11:11:01</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ENotaDebitoLogo.rdl">
+      <publishTime>07/11/2020 11:11:02</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ENotaDebitoLogoDua.rdl">
+      <publishTime>07/11/2020 11:11:02</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EstadoCtaCteCliGrupo.rdl">
+      <publishTime>07/11/2020 11:11:02</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/EstadoCtaCteClixFechPago.rdl">
+      <publishTime>07/11/2020 11:11:03</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/FlujoMesVentas.rdl">
+      <publishTime>07/11/2020 11:11:03</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/MatrizResumenKardexporCuenta.rdl">
+      <publishTime>07/11/2020 11:11:03</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/MatrizResumenValorizadoporGrupo.rdl">
+      <publishTime>07/11/2020 11:11:04</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/MatrizResumenValorizadoPorMarca.rdl">
+      <publishTime>07/11/2020 11:11:04</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/MatrizVendedorxFamilia.rdl">
+      <publishTime>07/11/2020 11:11:04</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/OrdenCompra.rdl">
+      <publishTime>07/11/2020 11:11:04</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/OrdenCompra_proceso.rdl">
+      <publishTime>07/11/2020 11:11:05</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RDL_Reportes.rar">
+      <publishTime>07/11/2020 09:23:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepCompraRecibida.rdl">
+      <publishTime>07/11/2020 11:11:05</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepCompras.rdl">
+      <publishTime>07/11/2020 11:11:06</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepCotizacion.rdl">
+      <publishTime>07/11/2020 11:11:06</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepCotizacion_plano.rdl">
+      <publishTime>07/11/2020 11:11:06</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepDocCAnexo.rdl">
+      <publishTime>07/11/2020 11:11:07</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepEntregasRealizadas.rdl">
+      <publishTime>07/11/2020 11:11:07</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepEntregasRealizadas1.rdl">
+      <publishTime>07/11/2020 11:11:07</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepEntregasRealizadas2.rdl">
+      <publishTime>07/11/2020 11:11:08</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepInventarioSimplificado.rdl">
+      <publishTime>07/11/2020 11:11:08</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepInventarioSimplificadoFisico.rdl">
+      <publishTime>07/11/2020 11:11:08</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepInventarioSimplificadoValorado.rdl">
+      <publishTime>07/11/2020 11:11:09</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepInventarioSimplificado_Separado.rdl">
+      <publishTime>07/11/2020 11:11:08</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepInventarioValorizadoMN.rdl">
+      <publishTime>07/11/2020 11:11:09</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepInventarioValorizadoUS.rdl">
+      <publishTime>07/11/2020 11:11:09</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexFisicoGeneral.rdl">
+      <publishTime>07/11/2020 11:11:09</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexFisicoSinAcum.rdl">
+      <publishTime>07/11/2020 11:11:10</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexSimplificadoGeneral.rdl">
+      <publishTime>07/11/2020 11:11:10</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexSimplificadoProm.rdl">
+      <publishTime>07/11/2020 11:11:10</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexSimplificadoProm13.rdl">
+      <publishTime>07/11/2020 11:11:11</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexValoradoGeneral.rdl">
+      <publishTime>07/11/2020 11:11:11</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexValoradoPromMN.rdl">
+      <publishTime>07/11/2020 11:11:11</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexValoradoPromMNAlmacen.rdl">
+      <publishTime>07/11/2020 11:11:12</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexValoradoPromMNResumen.rdl">
+      <publishTime>07/11/2020 11:11:12</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexValoradoPromUS.rdl">
+      <publishTime>07/11/2020 11:11:12</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepKardexValoradoPromUSAlmacen.rdl">
+      <publishTime>07/11/2020 11:11:13</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepLiquidacionDet.rdl">
+      <publishTime>07/11/2020 11:11:13</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepLiquidacionDetTR.rdl">
+      <publishTime>07/11/2020 11:11:13</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepLiquidacionTRResumen.rdl">
+      <publishTime>07/11/2020 11:11:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovAlmacenesArt.rdl">
+      <publishTime>07/11/2020 11:11:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovAlmacenesArtFiltros.rdl">
+      <publishTime>07/11/2020 11:11:15</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovAlmacenesCli.rdl">
+      <publishTime>07/11/2020 11:11:15</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovAlmacenes_Serie.rdl">
+      <publishTime>07/11/2020 11:11:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientoN.rdl">
+      <publishTime>07/11/2020 11:11:15</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientoN1.rdl">
+      <publishTime>07/11/2020 11:11:16</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientoPendiente.rdl">
+      <publishTime>07/11/2020 11:11:16</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientoPendiente1.rdl">
+      <publishTime>07/11/2020 11:11:16</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientoPendiente2.rdl">
+      <publishTime>07/11/2020 11:11:17</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientoPendienteRecojoLote.rdl">
+      <publishTime>07/11/2020 11:11:17</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientoS.rdl">
+      <publishTime>07/11/2020 11:11:17</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientosCaja.rdl">
+      <publishTime>07/11/2020 11:11:18</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepMovimientoVer.rdl">
+      <publishTime>07/11/2020 11:11:18</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepNotaVenta.rdl">
+      <publishTime>07/11/2020 11:11:18</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Report1.rdl">
+      <publishTime>07/11/2020 11:11:19</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Report2.rdl">
+      <publishTime>07/11/2020 11:11:19</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Report3.rdl">
+      <publishTime>07/11/2020 11:11:19</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ReporteCobranzas.rdl">
+      <publishTime>07/11/2020 11:11:19</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ReporteCobranzasPorLiquidacion.rdl">
+      <publishTime>07/11/2020 11:11:20</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ReporteDetalleCompras.rdl">
+      <publishTime>07/11/2020 09:23:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ReporteLiquidacionBalones.rdl">
+      <publishTime>07/11/2020 11:11:20</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepPendientesEntrega.rdl">
+      <publishTime>07/11/2020 11:11:20</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepPendientesEntrega1.rdl">
+      <publishTime>07/11/2020 11:11:20</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepPendientesEntrega2.rdl">
+      <publishTime>07/11/2020 11:11:21</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepPendientesRecepcion.rdl">
+      <publishTime>07/11/2020 11:11:21</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepResumenKardexFisico.rdl">
+      <publishTime>07/11/2020 11:11:21</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepStockArticulo2.rdl">
+      <publishTime>07/11/2020 11:11:21</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepVendedoresTab.rdl">
+      <publishTime>07/11/2020 11:11:22</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepVenta.rdl">
+      <publishTime>07/11/2020 11:11:22</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RepVentasxVendedorDetallado.rdl">
+      <publishTime>07/11/2020 11:11:22</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/ResumenCajaDiario.rdl">
+      <publishTime>07/11/2020 11:11:23</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptArticuloPrecioEquivalente.rdl">
+      <publishTime>07/11/2020 11:11:27</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptArticuloPrecioEquivalenteGrupo.rdl">
+      <publishTime>07/11/2020 11:11:27</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptArticulos.rdl">
+      <publishTime>07/11/2020 11:11:28</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptArticulo_Inventario.rdl">
+      <publishTime>07/11/2020 11:11:27</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptClientes.rdl">
+      <publishTime>07/11/2020 11:11:28</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptCobranzaxCliente.rdl">
+      <publishTime>07/11/2020 11:11:28</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptDetalleCompras.rdl">
+      <publishTime>07/11/2020 11:11:29</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptDetalleCompras_2.rdl">
+      <publishTime>07/11/2020 11:11:29</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptDetalleGrupoAlmacen.rdl">
+      <publishTime>07/11/2020 11:11:29</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptDetalleVentas.rdl">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptDetalleVentasGrifo.rdl">
+      <publishTime>07/11/2020 11:11:30</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptDetalleVentasGrifoLista.rdl">
+      <publishTime>07/11/2020 11:11:31</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptDetalleVentas_2.rdl">
+      <publishTime>07/11/2020 11:11:30</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptDetalleVentas_2x.rdl">
+      <publishTime>07/11/2020 11:11:30</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptGuiasPendientesPorFacturar.rdl">
+      <publishTime>07/11/2020 11:11:31</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptLiquidacionAduana.rdl">
+      <publishTime>07/11/2020 11:11:31</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptLiquidacionDiario.rdl">
+      <publishTime>07/11/2020 11:11:32</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptListaGuiaRemision.rdl">
+      <publishTime>07/11/2020 11:11:32</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptListaPostulaciones.rdl">
+      <publishTime>07/11/2020 11:11:32</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoCtaCteCliente.rdl">
+      <publishTime>07/11/2020 11:11:33</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoCtaCteClienteDetallado.rdl">
+      <publishTime>07/11/2020 11:11:34</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoCtaCteProveedores.rdl">
+      <publishTime>07/11/2020 11:11:34</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoIngresos.rdl">
+      <publishTime>07/11/2020 11:11:34</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoIngresosDetalle.rdl">
+      <publishTime>07/11/2020 11:11:35</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoOrden.rdl">
+      <publishTime>07/11/2020 11:11:35</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoOrdenDetallado.rdl">
+      <publishTime>07/11/2020 11:11:35</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoOrdenDetalladoGrupo.rdl">
+      <publishTime>07/11/2020 11:11:36</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMovimientoOrdenGrupo.rdl">
+      <publishTime>07/11/2020 11:11:36</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptMov_CtaCteCli_Det.rdl">
+      <publishTime>07/11/2020 11:11:33</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptPendientesDespacho.rdl">
+      <publishTime>07/11/2020 11:11:36</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptPlanillaDiarioGrifo.rdl">
+      <publishTime>07/11/2020 11:11:37</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptResumenCostoVentas.rdl">
+      <publishTime>07/11/2020 11:11:37</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptResumendeVentaGrupo.rdl">
+      <publishTime>07/11/2020 11:11:37</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptResumendeVentaGrupoAlmacen.rdl">
+      <publishTime>07/11/2020 11:11:38</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptResumenDiarioGrifo.rdl">
+      <publishTime>07/11/2020 11:11:38</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptResumenFamiliaVendedor.rdl">
+      <publishTime>07/11/2020 11:11:38</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptResumenVentaGrupoDetalle.rdl">
+      <publishTime>07/11/2020 09:23:14</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptResumenxVendedorFamilia.rdl">
+      <publishTime>07/11/2020 11:11:38</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptStock_Serie.rdl">
+      <publishTime>07/11/2020 11:11:39</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptValesPorFacturar.rdl">
+      <publishTime>07/11/2020 11:11:39</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptValesporFacturarArticulo.rdl">
+      <publishTime>07/11/2020 11:11:39</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptVentaDua.rdl">
+      <publishTime>07/11/2020 11:11:40</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptVentas_Vendedor.rdl">
+      <publishTime>07/11/2020 11:11:40</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/RptVoucherIngresoEgreso.rdl">
+      <publishTime>07/11/2020 11:11:40</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_ControlOrdenes.rdl">
+      <publishTime>07/11/2020 11:11:23</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_CronogramaEntregas.rdl">
+      <publishTime>07/11/2020 11:11:23</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_DetalleporCobrar.rdl">
+      <publishTime>07/11/2020 11:11:24</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_DetalleporCobrarProducto.rdl">
+      <publishTime>07/11/2020 11:11:24</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_Fletes_Prorrateo.rdl">
+      <publishTime>07/11/2020 11:11:24</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_LiquidacionCajaSerie.rdl">
+      <publishTime>07/11/2020 11:11:25</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_LiquidacionGeneral_Saldo.rdl">
+      <publishTime>07/11/2020 11:11:25</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_Liquidacion_Caja_Multimoneda.rdl">
+      <publishTime>07/11/2020 11:11:25</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_Rentabilidad_producto.rdl">
+      <publishTime>07/11/2020 11:11:25</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_ResumenFecha.rdl">
+      <publishTime>07/11/2020 11:11:26</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_ResumenPorCobrar.rdl">
+      <publishTime>07/11/2020 11:11:26</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_ResumenRentabilidad.rdl">
+      <publishTime>07/11/2020 11:11:26</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Rpt_ResumenVentaSerie.rdl">
+      <publishTime>07/11/2020 11:11:27</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/sticker.rdl">
+      <publishTime>07/11/2020 11:11:41</publishTime>
+    </File>
+    <File Include="Reportes/bin/Debug/Sticker2.rdl">
+      <publishTime>07/11/2020 11:11:41</publishTime>
+    </File>
+    <File Include="Reportes/Catalogopreciosarticulo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/conexion.rds">
+      <publishTime>07/11/2020 09:23:15</publishTime>
+    </File>
+    <File Include="Reportes/Copia de RepMovimientoN.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/CtasxPagarUbicacion.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/CuentasPorPagar-Financiamientos.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/CuentasPorPagar.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/DespachoDevoluciones.rdl">
+      <publishTime>02/12/2020 16:48:57</publishTime>
+    </File>
+    <File Include="Reportes/DespachoDevoluciones.rdl.data">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/DespachoNotadeVenta.rdl">
+      <publishTime>02/12/2020 16:48:48</publishTime>
+    </File>
+    <File Include="Reportes/DespachoNotadeVenta.rdl.data">
+      <publishTime>01/12/2020 16:42:14</publishTime>
+    </File>
+    <File Include="Reportes/DespachoResumen.rdl">
+      <publishTime>02/12/2020 16:47:37</publishTime>
+    </File>
+    <File Include="Reportes/DespachoSaldoGuia.rdl">
+      <publishTime>02/12/2020 16:47:57</publishTime>
+    </File>
+    <File Include="Reportes/EGuiaRemision - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EGuiaRemision.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EGuiaRemision.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoice.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoice.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoice.rdlc">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo-hotel_vasco.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo-ORIGINAL.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo1.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoDua.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoDua.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoDua_original.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoGrifo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoLibreria.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoLibreriaAcuario.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoLibreriaAcuario.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoPercepcion.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoPercepcion.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogoValor.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo_Aduana.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo_Aduana.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo_Aduana_olzza.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo_CPE.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo_CPE.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLogo_xxxxxx.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLote.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceLote.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceTicket.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceTicket.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceTicketHotel01.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceTicketHotel01dddd.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceTicket_CPE.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceTicket_Ferreteria.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceTicket_Serie.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EInvoiceTicket_Zofra.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaCredito.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaCredito.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaCreditoLogo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaCreditoLogo.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaCreditoLogoDua.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaCreditoLogoLibreria.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaDebito.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaDebito.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaDebitoLogo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaDebitoLogo.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ENotaDebitoLogoDua.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EstadoCtaCteCli.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EstadoCtaCteCliGrupo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/EstadoCtaCteClixFechPago.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/F002-279-ULTIMO.pdf">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/FlujodePagosLetra.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/FlujoDeVctos.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/FlujoMesVentas - Backup.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/FlujoMesVentas.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/FormatoLetra.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/KardexUnidades.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizResumenKardexporCuenta.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizResumenKardexporCuenta.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizResumenValorizadoporGrupo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizResumenValorizadoporGrupo.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizResumenValorizadoPorMarca.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizResumenValorizadoPorMarca.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizVendedorxFamilia - Backup.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizVendedorxFamilia.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MatrizVendedorxFamilia.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/MovimientoArticulo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/OrdenCompra.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/OrdenCompra.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/OrdenCompra_proceso.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/PendientesxCliente.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepArticulo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCliente.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCompraRecibida.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCompraRecibida.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCompras.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepComprobanteC.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepComprobanteCRuc.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepConsistenciaC.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepConsistenciaV.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepConsolidadoAlmacen.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCostoXArticulo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCostoXArticuloResumen.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCostoXArticuloResumenUS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCostoXArticuloUS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCotizacion.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCotizacion.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCotizacion_1.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCotizacion_2.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCotizacion_plano.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepCotizacion_plano.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepDocCAnexo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepDocCAnexo.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepDocCompra.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepDocVenta.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepEntregasRealizadas.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepEntregasRealizadas.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepEntregasRealizadas1.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepEntregasRealizadas2.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepEstadisticas.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepIngresosValorizadosMN.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepIngresosValorizadosUS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepInventarioSimplificado.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepInventarioSimplificadoFisico.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepInventarioSimplificadoValorado.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepInventarioSimplificado_Separado.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepInventarioSimplificado_Separado.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepInventarioValorizadoMN.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepInventarioValorizadoUS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardex.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardex13-1.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexFisico.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexFisicoGeneral.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexFisicoSinAcum.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexFisicoSinAcum.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexIdenEspecif.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexPEPS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexPromedio.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexSimplificadoGeneral.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexSimplificadoGeneral.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexSimplificadoProm.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexSimplificadoProm.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexSimplificadoProm13.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexT.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoGeneral.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoGeneral.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoPromMN - copia.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoPromMN.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoPromMN.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoPromMNAlmacen.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoPromMNResumen - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoPromMNResumen.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoPromUS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoPromUSAlmacen.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepKardexValoradoProm_ver.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepLiquidacionDet.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepLiquidacionDet.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepLiquidacionDetTR.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepLiquidacionDetTR.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepLiquidacionRes.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepLiquidacionTRResumen.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepLiquidacionTRResumen.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepListaTC.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenesArt.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenesArt.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenesArtFiltros - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenesArtFiltros.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenesArtFiltros.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenesArtFiltros.rdlc">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenesCli.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenesCli.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenes_Serie.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovAlmacenes_Serie.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimiento.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoAlmacenes.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoN.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoN.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoN1.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoN1.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoPendiente.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoPendiente.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoPendiente1.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoPendiente2.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoPendienteRecojoLote.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoPendienteRecojoLote.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoS - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoS.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientosCaja.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientosCaja.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepMovimientoVer.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepNotaVenta.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepNotaVenta.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Report1.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Report1.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Report2 - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Report2.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Report2.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Report3.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Report3.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteCobranzas - Copia de seguridad %282%29.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteCobranzas - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteCobranzas.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteCobranzasCliente.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteCobranzasFpago.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteCobranzasPorLiquidacion.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteCobranzasPorLiquidacion.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteLiquidacionBalones.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ReporteLiquidacionBalones.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/Reportes.rptproj">
+      <publishTime>01/12/2020 15:54:19</publishTime>
+    </File>
+    <File Include="Reportes/Reportes.rptproj.user">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/Reportes.sln">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/RepPDTComprasD.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPDTComprasR.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPDTVentasD.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPDTVentasR.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendienteCliente.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendienteDespachoDet.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendienteDespachoRes.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendientesEntrega.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendientesEntrega.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendientesEntrega1.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendientesEntrega1.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendientesEntrega2.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendientesRecepcion.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPendientesRecepcion.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepPrecios.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepProveedor.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepResumenKardexFisico.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepSalidasValorizadosMN.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepSalidasValorizadosUS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepSockVal.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepSockValUS.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStock.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockArticulo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockArticulo2.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockArticulo2.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockArticuloDescr.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockArticuloDescripcion.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockArticuloGrupo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockArticuloMarca.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockMod.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockValorizadoD.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepStockValorizadoR.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepValorizadoCompra.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepVendedoresTab - Backup.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepVendedoresTab.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepVendedoresTab.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepVenta.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepVenta.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepVentaDetalle.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepVentasxVendedorDetallado - Backup.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RepVentasxVendedorDetallado.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ResumenCajaDiario.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/ResumenCajaDiario.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticuloPrecioEquivalente - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticuloPrecioEquivalente.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticuloPrecioEquivalente.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticuloPrecioEquivalenteGrupo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticuloPrecioEquivalenteGrupo.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticulos.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticulos.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticulo_Inventario.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptArticulo_Inventario.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptCanjeLetras.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptClientes - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptClientes.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptClientes.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptCobranzaxCliente - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptCobranzaxCliente.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleCompras.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleCompras.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleCompras_2.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleCompras_2.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalledeMovimientos.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleGrupoAlmacen - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleGrupoAlmacen.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentas.rdl">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentas.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentasGrifo.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentasGrifo.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentasGrifoLista.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentasGrifoLista.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentas_2.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentas_2.rdl.data">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptDetalleVentas_2x.rdl">
+      <publishTime>07/11/2020 09:23:12</publishTime>
+    </File>
+    <File Include="Reportes/RptGuiasPendientesPorFacturar.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptGuiasPendientesPorFacturar.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptInventarioValorizado.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptLiquidacionAduana - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptLiquidacionAduana.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptLiquidacionAduana.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptLiquidacionDiario.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptLiquidacionDiario.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptListaGuiaRemision.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptListaGuiaRemision.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptListaPostulaciones - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptListaPostulaciones.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptListaPostulaciones.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovCajaChica.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoCtaCteCliente - copia.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoCtaCteCliente.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoCtaCteCliente.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoCtaCteClienteDetallado.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoCtaCteClienteDetallado.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoCtaCteClienteDetallado_anti.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoCtaCteProveedores.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoCtaCteProveedores.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoIngresos.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoIngresos.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoIngresosDetalle.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoIngresosDetalle.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoIngresosyEgresos.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoOrden - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoOrden.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoOrden.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoOrdenDetallado - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoOrdenDetallado.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoOrdenDetallado.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoOrdenDetalladoGrupo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientoOrdenGrupo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMovimientosLote.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMov_CtaCteCli_Det.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMov_CtaCteCli_Det.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptMov_CtaCteCli_Det_xxxx.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptPendientesDespacho.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptPendientesDespacho.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptPendientesxCliente.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptPlanillaDiarioGrifo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptPlanillaDiarioGrifo.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptRegistroPercepciones.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenCostoVentas.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenCostoVentasGrupo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenCostoVentasMarca.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumendeVentaGrupo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumendeVentaGrupo.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumendeVentaGrupoAlmacen.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumendeVentaGrupoAlmacen.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenDiarioGrifo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenDiarioGrifo.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenFamiliaVendedor - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenFamiliaVendedor.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenFamiliaVendedor.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenMovimientos.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenSalidaPorAlmacenes.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenxFecha.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenxVendedorFamilia - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenxVendedorFamilia.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptResumenxVendedorFamilia.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptSalidaPorAlmacenes.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptStock_Serie - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptStock_Serie.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptStock_Serie.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptUbicacionBanco.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptValesPorFacturar.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptValesPorFacturar.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptValesporFacturarArticulo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptValesporFacturarArticulo.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptVentaDua.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptVentas_Vendedor.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptVentas_Vendedor.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptVoucherIngresoEgreso.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/RptVoucherIngresoEgreso.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ControlOrdenes - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ControlOrdenes.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ControlOrdenes.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_CronogramaEntregas - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_CronogramaEntregas.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_CronogramaEntregas.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_DetalleporCobrar.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_DetalleporCobrar.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_DetalleporCobrarProducto.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_DetalleporCobrarProducto.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_Fletes_Prorrateo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_Fletes_Prorrateo.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_LiquidacionCajaSerie - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_LiquidacionCajaSerie.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_LiquidacionCajaSerie.rdl - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_LiquidacionCajaSerie.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_LiquidacionGeneral_Saldo - Backup %282%29.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_LiquidacionGeneral_Saldo - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_LiquidacionGeneral_Saldo.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_LiquidacionGeneral_Saldo.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_Liquidacion_Caja_Multimoneda - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_Liquidacion_Caja_Multimoneda.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_Liquidacion_Caja_Multimoneda.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_Rentabilidad_producto.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_Rentabilidad_producto.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ResumenFecha.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ResumenFecha.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ResumenPorCobrar.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ResumenPorCobrar.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ResumenRentabilidad.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ResumenVentaSerie.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Rpt_ResumenVentaSerie.rdl.data">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/sticker - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:15</publishTime>
+    </File>
+    <File Include="Reportes/sticker.rdl">
+      <publishTime>07/11/2020 09:23:15</publishTime>
+    </File>
+    <File Include="Reportes/Sticker2 - Backup.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Sticker2 - Copia de seguridad.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/Sticker2.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/UpgradeLog.htm">
+      <publishTime>07/11/2020 10:46:50</publishTime>
+    </File>
+    <File Include="Reportes/UpgradeLog.XML">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/UpgradeLog2.htm">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/UpgradeLog3.htm">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reportes/XRepMovimientoN.rdl">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/_UpgradeReport_Files/UpgradeReport.css">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/_UpgradeReport_Files/UpgradeReport.xslt">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/_UpgradeReport_Files/UpgradeReport_Minus.gif">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Reportes/_UpgradeReport_Files/UpgradeReport_Plus.gif">
+      <publishTime>07/11/2020 09:23:13</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/nugetexample.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

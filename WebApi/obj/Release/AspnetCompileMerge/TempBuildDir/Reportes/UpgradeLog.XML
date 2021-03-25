@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Reportes">
+</Property><Property Name="Archivo de la solución" Value="D:\Proyecto\SICOVEN-PROTOTIPO\bin\x86\Debug\Reportes\Reportes.sln">
+</Property><Property Name="Date" Value="lunes, 09 de noviembre de 2015">
+</Property><Property Name="Time" Value="15:31 p.m.">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Reportes.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="Reportes.sln" Description="Converted">
+</Event></UpgradeLog>

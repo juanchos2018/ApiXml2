@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Reportes", "Reportes.rptproj", "{E53A953D-8809-43C5-966A-2DC462ABD623}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.Debug|Default.ActiveCfg = Debug
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.Debug|Default.Build.0 = DebugLocal
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.Debug|Default.Deploy.0 = DebugLocal
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.DebugLocal|Default.Build.0 = DebugLocal
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.Production|Default.ActiveCfg = Production
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.Production|Default.Build.0 = Production
+		{E53A953D-8809-43C5-966A-2DC462ABD623}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

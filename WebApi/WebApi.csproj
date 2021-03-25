@@ -1,0 +1,541 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07E8D76B-ABF8-464D-B24E-AA08443ECBEB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApi</RootNamespace>
+    <AssemblyName>WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44326</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CloudinaryDotNet, Version=1.12.0.0, Culture=neutral, PublicKeyToken=c8234dc617ae7841, processorArchitecture=MSIL">
+      <HintPath>..\packages\CloudinaryDotNet.1.12.0\lib\net45\CloudinaryDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ClsFtp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ClsFtp.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.0.1.29147, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCodeNet.0.3\lib\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\efacturacionClsNuevo\bin\Debug\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.2\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.2\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".editorconfig" />
+    <None Include="Connected Services\GetSunatBeta\configuration91.svcinfo" />
+    <None Include="Connected Services\GetSunatBeta\configuration.svcinfo" />
+    <None Include="Connected Services\GetSunatBeta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Global.asax" />
+    <Content Include="imagenes\logo.png" />
+    <Content Include="Reportes\Catalogopreciosarticulo.rdl" />
+    <Content Include="Reportes\conexion.rds" />
+    <Content Include="Reportes\Copia de RepMovimientoN.rdl" />
+    <Content Include="Reportes\CtasxPagarUbicacion.rdl" />
+    <Content Include="Reportes\CuentasPorPagar-Financiamientos.rdl" />
+    <Content Include="Reportes\CuentasPorPagar.rdl" />
+    <Content Include="Reportes\DespachoDevoluciones.rdl" />
+    <Content Include="Reportes\DespachoNotadeVenta.rdl" />
+    <Content Include="Reportes\DespachoSaldoGuia.rdl" />
+    <Content Include="Reportes\EGuiaRemision - Copia de seguridad.rdl" />
+    <Content Include="Reportes\EGuiaRemision.rdl" />
+    <Content Include="Reportes\EInvoice.rdl" />
+    <Content Include="Reportes\EInvoice.rdlc" />
+    <Content Include="Reportes\EInvoiceLogo-hotel_vasco.rdl" />
+    <Content Include="Reportes\EInvoiceLogo-ORIGINAL.rdl" />
+    <Content Include="Reportes\EInvoiceLogo.rdl" />
+    <Content Include="Reportes\EInvoiceLogo1.rdl" />
+    <Content Include="Reportes\EInvoiceLogoDua.rdl" />
+    <Content Include="Reportes\EInvoiceLogoDua_original.rdl" />
+    <Content Include="Reportes\EInvoiceLogoGrifo.rdl" />
+    <Content Include="Reportes\EInvoiceLogoLibreria.rdl" />
+    <Content Include="Reportes\EInvoiceLogoLibreriaAcuario.rdl" />
+    <Content Include="Reportes\EInvoiceLogoPercepcion.rdl" />
+    <Content Include="Reportes\EInvoiceLogoValor.rdl" />
+    <Content Include="Reportes\EInvoiceLogo_Aduana.rdl" />
+    <Content Include="Reportes\EInvoiceLogo_Aduana_olzza.rdl" />
+    <Content Include="Reportes\EInvoiceLogo_CPE.rdl" />
+    <Content Include="Reportes\EInvoiceLogo_xxxxxx.rdl" />
+    <Content Include="Reportes\EInvoiceLote.rdl" />
+    <Content Include="Reportes\EInvoiceTicket.rdl" />
+    <Content Include="Reportes\EInvoiceTicketHotel01.rdl" />
+    <Content Include="Reportes\EInvoiceTicketHotel01dddd.rdl" />
+    <Content Include="Reportes\EInvoiceTicket_Ferreteria.rdl" />
+    <Content Include="Reportes\EInvoiceTicket_Serie.rdl" />
+    <Content Include="Reportes\EInvoiceTicket_Zofra.rdl" />
+    <Content Include="Reportes\ENotaCredito.rdl" />
+    <Content Include="Reportes\ENotaCreditoLogo.rdl" />
+    <Content Include="Reportes\ENotaCreditoLogoDua.rdl" />
+    <Content Include="Reportes\ENotaCreditoLogoLibreria.rdl" />
+    <Content Include="Reportes\ENotaDebito.rdl" />
+    <Content Include="Reportes\ENotaDebitoLogo.rdl" />
+    <Content Include="Reportes\ENotaDebitoLogoDua.rdl" />
+    <Content Include="Reportes\EstadoCtaCteCli.rdl" />
+    <Content Include="Reportes\EstadoCtaCteCliGrupo.rdl" />
+    <Content Include="Reportes\EstadoCtaCteClixFechPago.rdl" />
+    <Content Include="Reportes\FlujodePagosLetra.rdl" />
+    <Content Include="Reportes\FlujoDeVctos.rdl" />
+    <Content Include="Reportes\FlujoMesVentas - Backup.rdl" />
+    <Content Include="Reportes\FlujoMesVentas.rdl" />
+    <Content Include="Reportes\FormatoLetra.rdl" />
+    <Content Include="Reportes\KardexUnidades.rdl" />
+    <Content Include="Reportes\MatrizResumenKardexporCuenta.rdl" />
+    <Content Include="Reportes\MatrizResumenValorizadoporGrupo.rdl" />
+    <Content Include="Reportes\MatrizResumenValorizadoPorMarca.rdl" />
+    <Content Include="Reportes\MatrizVendedorxFamilia - Backup.rdl" />
+    <Content Include="Reportes\MatrizVendedorxFamilia.rdl" />
+    <Content Include="Reportes\MovimientoArticulo.rdl" />
+    <Content Include="Reportes\OrdenCompra.rdl" />
+    <Content Include="Reportes\OrdenCompra_proceso.rdl" />
+    <Content Include="Reportes\PendientesxCliente.rdl" />
+    <Content Include="Reportes\RepArticulo.rdl" />
+    <Content Include="Reportes\RepCliente.rdl" />
+    <Content Include="Reportes\RepCompraRecibida.rdl" />
+    <Content Include="Reportes\RepComprobanteC.rdl" />
+    <Content Include="Reportes\RepComprobanteCRuc.rdl" />
+    <Content Include="Reportes\RepConsistenciaC.rdl" />
+    <Content Include="Reportes\RepConsistenciaV.rdl" />
+    <Content Include="Reportes\RepConsolidadoAlmacen.rdl" />
+    <Content Include="Reportes\RepCostoXArticulo.rdl" />
+    <Content Include="Reportes\RepCostoXArticuloResumen.rdl" />
+    <Content Include="Reportes\RepCostoXArticuloResumenUS.rdl" />
+    <Content Include="Reportes\RepCostoXArticuloUS.rdl" />
+    <Content Include="Reportes\RepCotizacion.rdl" />
+    <Content Include="Reportes\RepCotizacion_1.rdl" />
+    <Content Include="Reportes\RepCotizacion_2.rdl" />
+    <Content Include="Reportes\RepCotizacion_plano.rdl" />
+    <Content Include="Reportes\RepDocCAnexo.rdl" />
+    <Content Include="Reportes\RepDocCompra.rdl" />
+    <Content Include="Reportes\RepDocVenta.rdl" />
+    <Content Include="Reportes\RepEntregasRealizadas.rdl" />
+    <Content Include="Reportes\RepEntregasRealizadas1.rdl" />
+    <Content Include="Reportes\RepEntregasRealizadas2.rdl" />
+    <Content Include="Reportes\RepEstadisticas.rdl" />
+    <Content Include="Reportes\RepIngresosValorizadosMN.rdl" />
+    <Content Include="Reportes\RepIngresosValorizadosUS.rdl" />
+    <Content Include="Reportes\RepInventarioSimplificado.rdl" />
+    <Content Include="Reportes\RepInventarioSimplificadoFisico.rdl" />
+    <Content Include="Reportes\RepInventarioSimplificadoValorado.rdl" />
+    <Content Include="Reportes\RepInventarioSimplificado_Separado.rdl" />
+    <Content Include="Reportes\RepInventarioValorizadoMN.rdl" />
+    <Content Include="Reportes\RepInventarioValorizadoUS.rdl" />
+    <Content Include="Reportes\RepKardex.rdl" />
+    <Content Include="Reportes\RepKardex13-1.rdl" />
+    <Content Include="Reportes\RepKardexFisico.rdl" />
+    <Content Include="Reportes\RepKardexFisicoGeneral.rdl" />
+    <Content Include="Reportes\RepKardexFisicoSinAcum.rdl" />
+    <Content Include="Reportes\RepKardexIdenEspecif.rdl" />
+    <Content Include="Reportes\RepKardexPEPS.rdl" />
+    <Content Include="Reportes\RepKardexPromedio.rdl" />
+    <Content Include="Reportes\RepKardexSimplificadoGeneral.rdl" />
+    <Content Include="Reportes\RepKardexSimplificadoProm.rdl" />
+    <Content Include="Reportes\RepKardexSimplificadoProm13.rdl" />
+    <Content Include="Reportes\RepKardexT.rdl" />
+    <Content Include="Reportes\RepKardexValoradoGeneral.rdl" />
+    <Content Include="Reportes\RepKardexValoradoPromMN - copia.rdl" />
+    <Content Include="Reportes\RepKardexValoradoPromMN.rdl" />
+    <Content Include="Reportes\RepKardexValoradoPromMNResumen - Copia de seguridad.rdl" />
+    <Content Include="Reportes\RepKardexValoradoPromMNResumen.rdl" />
+    <Content Include="Reportes\RepKardexValoradoPromUS.rdl" />
+    <Content Include="Reportes\RepKardexValoradoPromUSAlmacen.rdl" />
+    <Content Include="Reportes\RepKardexValoradoProm_ver.rdl" />
+    <Content Include="Reportes\RepLiquidacionDet.rdl" />
+    <Content Include="Reportes\RepLiquidacionDetTR.rdl" />
+    <Content Include="Reportes\RepLiquidacionRes.rdl" />
+    <Content Include="Reportes\RepLiquidacionTRResumen.rdl" />
+    <Content Include="Reportes\RepListaTC.rdl" />
+    <Content Include="Reportes\RepMovAlmacenesArt.rdl" />
+    <Content Include="Reportes\RepMovAlmacenesArtFiltros - Copia de seguridad.rdl" />
+    <Content Include="Reportes\RepMovAlmacenesArtFiltros.rdl" />
+    <Content Include="Reportes\RepMovAlmacenesArtFiltros.rdlc" />
+    <Content Include="Reportes\RepMovAlmacenesCli.rdl" />
+    <Content Include="Reportes\RepMovAlmacenes_Serie.rdl" />
+    <Content Include="Reportes\RepMovimiento.rdl" />
+    <Content Include="Reportes\RepMovimientoAlmacenes.rdl" />
+    <Content Include="Reportes\RepMovimientoN.rdl" />
+    <Content Include="Reportes\RepMovimientoN1.rdl" />
+    <Content Include="Reportes\RepMovimientoPendiente.rdl" />
+    <Content Include="Reportes\RepMovimientoPendiente1.rdl" />
+    <Content Include="Reportes\RepMovimientoPendiente2.rdl" />
+    <Content Include="Reportes\RepMovimientoPendienteRecojoLote.rdl" />
+    <Content Include="Reportes\RepMovimientoS - Copia de seguridad.rdl" />
+    <Content Include="Reportes\RepMovimientoS.rdl" />
+    <Content Include="Reportes\RepMovimientosCaja.rdl" />
+    <Content Include="Reportes\RepMovimientoVer.rdl" />
+    <Content Include="Reportes\RepNotaVenta.rdl" />
+    <Content Include="Reportes\Report1.rdl" />
+    <Content Include="Reportes\Report2 - Copia de seguridad.rdl" />
+    <Content Include="Reportes\Report2.rdl" />
+    <Content Include="Reportes\Report3.rdl" />
+    <Content Include="Reportes\ReporteCobranzas - Copia de seguridad %282%29.rdl" />
+    <Content Include="Reportes\ReporteCobranzas - Copia de seguridad.rdl" />
+    <Content Include="Reportes\ReporteCobranzas.rdl" />
+    <Content Include="Reportes\ReporteCobranzasCliente.rdl" />
+    <Content Include="Reportes\ReporteCobranzasFpago.rdl" />
+    <Content Include="Reportes\ReporteCobranzasPorLiquidacion.rdl" />
+    <Content Include="Reportes\ReporteLiquidacionBalones.rdl" />
+    <Content Include="Reportes\Reportes.rptproj" />
+    <Content Include="Reportes\RepPDTComprasD.rdl" />
+    <Content Include="Reportes\RepPDTComprasR.rdl" />
+    <Content Include="Reportes\RepPDTVentasD.rdl" />
+    <Content Include="Reportes\RepPDTVentasR.rdl" />
+    <Content Include="Reportes\RepPendienteCliente.rdl" />
+    <Content Include="Reportes\RepPendienteDespachoDet.rdl" />
+    <Content Include="Reportes\RepPendienteDespachoRes.rdl" />
+    <Content Include="Reportes\RepPendientesEntrega.rdl" />
+    <Content Include="Reportes\RepPendientesEntrega1.rdl" />
+    <Content Include="Reportes\RepPendientesEntrega2.rdl" />
+    <Content Include="Reportes\RepPendientesRecepcion.rdl" />
+    <Content Include="Reportes\RepPrecios.rdl" />
+    <Content Include="Reportes\RepProveedor.rdl" />
+    <Content Include="Reportes\RepResumenKardexFisico.rdl" />
+    <Content Include="Reportes\RepSalidasValorizadosMN.rdl" />
+    <Content Include="Reportes\RepSalidasValorizadosUS.rdl" />
+    <Content Include="Reportes\RepSockVal.rdl" />
+    <Content Include="Reportes\RepSockValUS.rdl" />
+    <Content Include="Reportes\RepStock.rdl" />
+    <Content Include="Reportes\RepStockArticulo.rdl" />
+    <Content Include="Reportes\RepStockArticulo2.rdl" />
+    <Content Include="Reportes\RepStockArticuloDescr.rdl" />
+    <Content Include="Reportes\RepStockArticuloDescripcion.rdl" />
+    <Content Include="Reportes\RepStockArticuloGrupo.rdl" />
+    <Content Include="Reportes\RepStockArticuloMarca.rdl" />
+    <Content Include="Reportes\RepStockMod.rdl" />
+    <Content Include="Reportes\RepStockValorizadoD.rdl" />
+    <Content Include="Reportes\RepStockValorizadoR.rdl" />
+    <Content Include="Reportes\RepValorizadoCompra.rdl" />
+    <Content Include="Reportes\RepVendedoresTab - Backup.rdl" />
+    <Content Include="Reportes\RepVendedoresTab.rdl" />
+    <Content Include="Reportes\RepVenta.rdl" />
+    <Content Include="Reportes\RepVentaDetalle.rdl" />
+    <Content Include="Reportes\RepVentasxVendedorDetallado - Backup.rdl" />
+    <Content Include="Reportes\RepVentasxVendedorDetallado.rdl" />
+    <Content Include="Reportes\ResumenCajaDiario.rdl" />
+    <Content Include="Reportes\RptArticuloPrecioEquivalente - Copia de seguridad.rdl" />
+    <Content Include="Reportes\RptArticuloPrecioEquivalente.rdl" />
+    <Content Include="Reportes\RptArticuloPrecioEquivalenteGrupo.rdl" />
+    <Content Include="Reportes\RptArticulos.rdl" />
+    <Content Include="Reportes\RptArticulo_Inventario.rdl" />
+    <Content Include="Reportes\RptCanjeLetras.rdl" />
+    <Content Include="Reportes\RptClientes - Copia de seguridad.rdl" />
+    <Content Include="Reportes\RptClientes.rdl" />
+    <Content Include="Reportes\RptCobranzaxCliente - Copia de seguridad.rdl" />
+    <Content Include="Reportes\RptCobranzaxCliente.rdl" />
+    <Content Include="Reportes\RptDetalleCompras.rdl" />
+    <Content Include="Reportes\RptDetalleCompras_2.rdl" />
+    <Content Include="Reportes\RptDetalledeMovimientos.rdl" />
+    <Content Include="Reportes\RptDetalleGrupoAlmacen - Copia de seguridad.rdl" />
+    <Content Include="Reportes\RptDetalleGrupoAlmacen.rdl" />
+    <Content Include="Reportes\RptDetalleVentas.rdl" />
+    <Content Include="Reportes\RptDetalleVentasGrifo.rdl" />
+    <Content Include="Reportes\RptDetalleVentasGrifoLista.rdl" />
+    <Content Include="Reportes\RptDetalleVentas_2.rdl" />
+    <Content Include="Reportes\RptDetalleVentas_2x.rdl" />
+    <Content Include="Reportes\RptGuiasPendientesPorFacturar.rdl" />
+    <Content Include="Reportes\RptInventarioValorizado.rdl" />
+    <Content Include="Reportes\RptLiquidacionAduana - Backup.rdl" />
+    <Content Include="Reportes\RptLiquidacionAduana.rdl" />
+    <Content Include="Reportes\RptLiquidacionDiario.rdl" />
+    <Content Include="Reportes\RptListaGuiaRemision.rdl" />
+    <Content Include="Reportes\RptListaPostulaciones - Backup.rdl" />
+    <Content Include="Reportes\RptListaPostulaciones.rdl" />
+    <Content Include="Reportes\RptMovCajaChica.rdl" />
+    <Content Include="Reportes\RptMovimientoCtaCteCliente - copia.rdl" />
+    <Content Include="Reportes\RptMovimientoCtaCteCliente.rdl" />
+    <Content Include="Reportes\RptMovimientoCtaCteClienteDetallado.rdl" />
+    <Content Include="Reportes\RptMovimientoCtaCteClienteDetallado_anti.rdl" />
+    <Content Include="Reportes\RptMovimientoCtaCteProveedores.rdl" />
+    <Content Include="Reportes\RptMovimientoIngresos.rdl" />
+    <Content Include="Reportes\RptMovimientoIngresosDetalle.rdl" />
+    <Content Include="Reportes\RptMovimientoIngresosyEgresos.rdl" />
+    <Content Include="Reportes\RptMovimientoOrden - Backup.rdl" />
+    <Content Include="Reportes\RptMovimientoOrden.rdl" />
+    <Content Include="Reportes\RptMovimientoOrdenDetallado - Backup.rdl" />
+    <Content Include="Reportes\RptMovimientoOrdenDetallado.rdl" />
+    <Content Include="Reportes\RptMovimientoOrdenDetalladoGrupo.rdl" />
+    <Content Include="Reportes\RptMovimientoOrdenGrupo.rdl" />
+    <Content Include="Reportes\RptMovimientosLote.rdl" />
+    <Content Include="Reportes\RptMov_CtaCteCli_Det.rdl" />
+    <Content Include="Reportes\RptMov_CtaCteCli_Det_xxxx.rdl" />
+    <Content Include="Reportes\RptPendientesDespacho.rdl" />
+    <Content Include="Reportes\RptPendientesxCliente.rdl" />
+    <Content Include="Reportes\RptPlanillaDiarioGrifo.rdl" />
+    <Content Include="Reportes\RptRegistroPercepciones.rdl" />
+    <Content Include="Reportes\RptResumenCostoVentas.rdl" />
+    <Content Include="Reportes\RptResumenCostoVentasGrupo.rdl" />
+    <Content Include="Reportes\RptResumenCostoVentasMarca.rdl" />
+    <Content Include="Reportes\RptResumendeVentaGrupo.rdl" />
+    <Content Include="Reportes\RptResumendeVentaGrupoAlmacen.rdl" />
+    <Content Include="Reportes\RptResumenDiarioGrifo.rdl" />
+    <Content Include="Reportes\RptResumenFamiliaVendedor - Backup.rdl" />
+    <Content Include="Reportes\RptResumenFamiliaVendedor.rdl" />
+    <Content Include="Reportes\RptResumenMovimientos.rdl" />
+    <Content Include="Reportes\RptResumenSalidaPorAlmacenes.rdl" />
+    <Content Include="Reportes\RptResumenxFecha.rdl" />
+    <Content Include="Reportes\RptResumenxVendedorFamilia - Backup.rdl" />
+    <Content Include="Reportes\RptResumenxVendedorFamilia.rdl" />
+    <Content Include="Reportes\RptSalidaPorAlmacenes.rdl" />
+    <Content Include="Reportes\RptStock_Serie - Backup.rdl" />
+    <Content Include="Reportes\RptStock_Serie.rdl" />
+    <Content Include="Reportes\RptUbicacionBanco.rdl" />
+    <Content Include="Reportes\RptValesPorFacturar.rdl" />
+    <Content Include="Reportes\RptValesporFacturarArticulo.rdl" />
+    <Content Include="Reportes\RptVentaDua.rdl" />
+    <Content Include="Reportes\RptVentas_Vendedor.rdl" />
+    <Content Include="Reportes\RptVoucherIngresoEgreso.rdl" />
+    <Content Include="Reportes\Rpt_ControlOrdenes - Backup.rdl" />
+    <Content Include="Reportes\Rpt_ControlOrdenes.rdl" />
+    <Content Include="Reportes\Rpt_CronogramaEntregas - Backup.rdl" />
+    <Content Include="Reportes\Rpt_CronogramaEntregas.rdl" />
+    <Content Include="Reportes\Rpt_DetalleporCobrar.rdl" />
+    <Content Include="Reportes\Rpt_DetalleporCobrarProducto.rdl" />
+    <Content Include="Reportes\Rpt_Fletes_Prorrateo.rdl" />
+    <Content Include="Reportes\Rpt_LiquidacionCajaSerie.rdl" />
+    <Content Include="Reportes\Rpt_LiquidacionCajaSerie.rdl - Backup.rdl" />
+    <Content Include="Reportes\Rpt_LiquidacionGeneral_Saldo - Backup %282%29.rdl" />
+    <Content Include="Reportes\Rpt_LiquidacionGeneral_Saldo - Backup.rdl" />
+    <Content Include="Reportes\Rpt_LiquidacionGeneral_Saldo.rdl" />
+    <Content Include="Reportes\Rpt_Liquidacion_Caja_Multimoneda - Copia de seguridad.rdl" />
+    <Content Include="Reportes\Rpt_Liquidacion_Caja_Multimoneda.rdl" />
+    <Content Include="Reportes\Rpt_Rentabilidad_producto.rdl" />
+    <Content Include="Reportes\Rpt_ResumenFecha.rdl" />
+    <Content Include="Reportes\Rpt_ResumenPorCobrar.rdl" />
+    <Content Include="Reportes\Rpt_ResumenRentabilidad.rdl" />
+    <Content Include="Reportes\Rpt_ResumenVentaSerie.rdl" />
+    <Content Include="Reportes\sticker - Copia de seguridad.rdl" />
+    <Content Include="Reportes\sticker.rdl" />
+    <Content Include="Reportes\Sticker2 - Backup.rdl" />
+    <Content Include="Reportes\Sticker2 - Copia de seguridad.rdl" />
+    <Content Include="Reportes\Sticker2.rdl" />
+    <Content Include="Reportes\XRepMovimientoN.rdl" />
+    <None Include="Connected Services\GetSunatBeta\billService.wsdl" />
+    <None Include="Connected Services\GetSunatBeta\billService1.wsdl" />
+    <Content Include="Reportes\Reportes.rptproj.user" />
+    <Content Include="Reportes\Reportes.sln" />
+    <Content Include="Reportes\UpgradeLog.htm" />
+    <Content Include="Reportes\UpgradeLog.XML" />
+    <Content Include="Reportes\UpgradeLog2.htm" />
+    <Content Include="Reportes\UpgradeLog3.htm" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AccessPolicyCors.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Connected Services\GetSunatBeta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\GenerarXML\EnvioCorreoController.cs" />
+    <Compile Include="Controllers\GenerarXML\GenerarPdfController.cs" />
+    <Compile Include="Controllers\GenerarXML\GenerarXml2Controller.cs" />
+    <Compile Include="Controllers\GenerarXML\GenerarXmlController.cs" />
+    <Compile Include="Controllers\SubirController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClsDataComprobante.cs" />
+    <Compile Include="Models\ClsXMLResultado.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\ComprobanteImagen\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.vbproj">
+      <Project>{6403035a-02da-4f53-be97-e885050d4d9b}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaEstilo\CapaEstilo.vbproj">
+      <Project>{5462bef9-d81a-4d31-af92-4b9510d37cdb}</Project>
+      <Name>CapaEstilo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocios\CapaNegocios.vbproj">
+      <Project>{6d642c6a-d6a4-4d9a-b2e7-35464866d5f8}</Project>
+      <Name>CapaNegocios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClsSigmaWs\ClsSigmaWs\ClsSigmaWs.vbproj">
+      <Project>{56ba0a20-0e48-4c2e-8a71-59728dfc737a}</Project>
+      <Name>ClsSigmaWs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eFacturacionCls21\eFacturacionCls21.vbproj">
+      <Project>{98de6e18-c4e6-4d06-8a15-f4617d381cec}</Project>
+      <Name>eFacturacionCls21</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\efacturacionClsNuevo\efacturacionClsNuevo.vbproj">
+      <Project>{6babaaed-e9cd-4c32-b2c3-4d9e3d6a1156}</Project>
+      <Name>efacturacionClsNuevo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eFacturacionCls\eFacturacionCls.vbproj">
+      <Project>{db326606-999c-448e-b6c6-be57583e5aed}</Project>
+      <Name>eFacturacionCls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\GetSunatBeta\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62067</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44326/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.sunat.gob.pe" targetNamespace="http://service.sunat.gob.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://e-factura.sunat.gob.pe/ol-it-wsconsvalidcpe/billValidService?xsd=1" namespace="http://service.sunat.gob.pe" />
+    </xsd:schema>
+  </types>
+  <message name="validaCDPcriterios">
+    <part name="parameters" element="tns:validaCDPcriterios" />
+  </message>
+  <message name="validaCDPcriteriosResponse">
+    <part name="parameters" element="tns:validaCDPcriteriosResponse" />
+  </message>
+  <message name="verificaCPEarchivo">
+    <part name="parameters" element="tns:verificaCPEarchivo" />
+  </message>
+  <message name="verificaCPEarchivoResponse">
+    <part name="parameters" element="tns:verificaCPEarchivoResponse" />
+  </message>
+  <portType name="billValidService">
+    <operation name="validaCDPcriterios">
+      <input xmlns:ns1="http://www.w3.org/2007/05/addressing/metadata" ns1:Action="urn:validaCDPcriterios" message="tns:validaCDPcriterios" />
+      <output xmlns:ns2="http://www.w3.org/2007/05/addressing/metadata" ns2:Action="http://service.sunat.gob.pe/billValidService/validaCDPcriteriosResponse" message="tns:validaCDPcriteriosResponse" />
+    </operation>
+    <operation name="verificaCPEarchivo">
+      <input xmlns:ns3="http://www.w3.org/2007/05/addressing/metadata" ns3:Action="urn:verificaCPEarchivo" message="tns:verificaCPEarchivo" />
+      <output xmlns:ns4="http://www.w3.org/2007/05/addressing/metadata" ns4:Action="http://service.sunat.gob.pe/billValidService/verificaCPEarchivoResponse" message="tns:verificaCPEarchivoResponse" />
+    </operation>
+  </portType>
+</definitions>

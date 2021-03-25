@@ -1,0 +1,439 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CapaNegocios
+</name>
+</assembly>
+<members>
+<member name="T:CapaNegocios.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:CapaNegocios.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:CapaNegocios.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="M:CapaNegocios.NAduana_Anticipos.ListaComprobante">
+ <summary>
+ Retorna una lista de comprobante de pago de liquidacion Agencia de Aduana
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NAduana_Cobranza.ListaComprobante">
+ <summary>
+ Retorna una lista de comprobante de pago de liquidacion Agencia de Aduana
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NArticulo.item(CapaNegocios.NArticulo)">
+ <summary>
+ Obtiene el codigo del producto a partir de la descricpion
+ </summary>
+ <param name="a"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NArticulo.itemRow(CapaNegocios.NArticulo)">
+ <summary>
+ Retorna un registo en forma de datatable
+ </summary>
+ <param name="a"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NArticulo.CodigoArticulo(System.String)">
+ <summary>
+ Obtiene el codigo de articulo ingresando la descripcion del articulo
+ </summary>
+ <param name="s"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NCajaVenta.EliminarFk(CapaNegocios.NCajaVenta)">
+ <summary>
+ Elima un registro por su FK comprobante de pago
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NCambioMoneda.Agregar(CapaNegocios.NCambioMoneda)">
+ <summary>
+ Agrega un registro en la tabla tipo de cambio
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NCambioMoneda.Actualizar(CapaNegocios.NCambioMoneda)">
+ <summary>
+ Actualiza los cambios realizados en la tabla tipo de cambio
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NCambioMoneda.Eliminar(CapaNegocios.NCambioMoneda)">
+ <summary>
+ Elimina un registro de la tabla tipo de cambio
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NCambioMoneda.Item(CapaNegocios.NCambioMoneda)">
+ <summary>
+ Obtiene un registro de la tabla tipo de cambio
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NCliente.Existe(CapaNegocios.NCliente)">
+ <summary>
+ Retorna un boleano si existe o no el cliente
+ </summary>
+ <param name="s"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NCliente.Lista_cliente">
+ <summary>
+ Obtiene un registro de cliente de la clase cliente
+ </summary>
+ <param name="c"></param>
+ <returns></returns>
+ 
+</member>
+<member name="M:CapaNegocios.NCliente.Precio_Ruta(System.String,System.String,System.String,System.Decimal)">
+ <summary>
+ Obtiene el precio por ruta asignada al cliente(tipo de precio en maestro cliente)
+ </summary>
+ <param name="idarticulo"></param>
+ <param name="tipoprecio"></param>
+ <param name="idcliente"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NComprobante.documentos(System.String)">
+ <summary>
+ Lista los comprobantes por Almacen
+ </summary>
+ <param name="idalmacen"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NComprobante.documentos(System.String,System.String)">
+ <summary>
+ Lista los comprobantes por almacen y serie
+ </summary>
+ <param name="idalmacen"></param>
+ <param name="serie"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NComprobante.documentos(System.String,System.String,System.String)">
+ <summary>
+ Lista los comprobantes por almacen serie y tipo de documento
+ </summary>
+ <param name="idalmacen"></param>
+ <param name="serie"></param>
+ <param name="tipodocumento"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NComprobante.CodigoBarraras(CapaNegocios.NComprobante)">
+ <summary>
+ Actualiza codigo has, signatuve y barras QR y estado sunat
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NComprobante.Documentos_Vencidos(System.Int32)">
+ <summary>
+ Retorna un booleano que confirma si existe o no documentos vencidos
+ </summary>
+ <param name="dias"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NComprobante.lista_Vencidos(System.Int32)">
+ <summary>
+ Retorna en formato lista algunos documentos vencidos
+ </summary>
+ <param name="dias"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NComprobante.RegistrodeVentas(System.DateTime,System.DateTime,System.String,System.Data.DataTable,System.String)">
+ <summary>
+ Registro de ventas el tipo de reporte 1 detallado, 2 resumen por dia y serie, 3 resumen por dia
+ </summary>
+ <param name="fi"></param>
+ <param name="ff"></param>
+ <param name="mon"></param>
+ <param name="cliente"></param>
+ <param name="tiporeporte"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NControl_Impresion.Agregar(CapaNegocios.NControl_Impresion)">
+ <summary>
+ Agrega un registro a la tabla control_imrpresion utiliza el store procedure
+ Str_control_impresion_I
+ </summary>
+</member>
+<member name="M:CapaNegocios.NControl_Impresion.Eliminar(CapaNegocios.NControl_Impresion)">
+ <summary>
+ Elimina un registro de la tabla control_impresion Str_Control_Impresion_D
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NControl_Impresion.Fila(CapaNegocios.NControl_Impresion)">
+ <summary>
+ Obtiene un registro de la clase Ncontrol_impresion 
+ </summary>
+ <param name="d"></param>
+ <returns>d</returns>
+</member>
+<member name="M:CapaNegocios.NControl_Impresion.Actualizar(CapaNegocios.NControl_Impresion)">
+ <summary>
+ Actualiza la tabla control impresion
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NDetalleComprobante.Insertar(System.Collections.Generic.List{CapaNegocios.NDetalleComprobante})">
+ <summary>
+ Agregar un array de detalle comprobante
+ </summary>
+ <param name="de"></param>
+</member>
+<member name="M:CapaNegocios.NDetalleComprobanteCompra.Eliminar(System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ Elimina un registro en funcion a su primary key de cabecera
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NDetalleComprobanteCompra.Lista(CapaNegocios.NDetalleComprobanteCompra)">
+ <summary>
+ Retorna una lista de los items del detalle de la factura
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+ 
+</member>
+<member name="M:CapaNegocios.NDetalleMovimiento.Eliminar(System.String,System.String,System.String,System.String)">
+ <summary>
+ Elimina el detalle del movimiento
+ </summary>
+ <param name="idalmacen"></param>
+ <param name="Tipodocumento"></param>
+ <param name="Numerodocumento"></param>
+ <param name="idlocalidad"></param>
+</member>
+<member name="M:CapaNegocios.NDetalleMovimiento.lista_movimientos(System.String,System.String,System.String)">
+ <summary>
+ Lista el detalle de movimientos por tipo de documento
+ </summary>
+ <param name="tmo"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NDetSurtidor.DetalleMaestro(CapaNegocios.NDetSurtidor)">
+ <summary>
+ Obtiene los registro relacionados a la tabla maestro
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NDetTipoSurtidor.Registro(CapaNegocios.NDetTipoSurtidor)">
+ <summary>
+ Obtiene un registro en funcion a la clave
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NDetTipoSurtidor.Lista(CapaNegocios.NDetTipoSurtidor)">
+ <summary>
+ Listado de todo los registros de la table
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NDetTipoSurtidor.Detalle_maestro(CapaNegocios.NDetTipoSurtidor)">
+ <summary>
+ Retorna los registros detalles de una item maestro
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NDet_Entidad.Agregar(CapaNegocios.NDet_Entidad)">
+ <summary>
+ Agrega un registro tipo certificado a la tabla det_entidad
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NDet_Entidad.Actualizar(CapaNegocios.NDet_Entidad)">
+ <summary>
+ Actualizar la tabla certificado a la tabla det_entidad
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NDeuda.SaldoDeuda(CapaNegocios.NDeuda,System.String)">
+ <summary>
+ Lista todos los documentos por cliente que tienen saldo distinto de cero
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NMovimiento.ExisteEnRefrencia(CapaNegocios.NMovimiento)">
+ <summary>
+ Obtiene verdadero o falso si el documento a eliminar existe como documento de referencia
+ </summary>
+ <param name="s"></param>d
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NMovimiento.Partes(CapaNegocios.NMovimiento)">
+ <summary>
+ Lista los partes de ingreso o salida según tipo de documento especificado
+ </summary>
+ <param name="p"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NPtentidad.Lista_emrpesas">
+ <summary>
+  Devuelve la relacion de bases de datos del sistema comercial
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NSurtidor.Registro(CapaNegocios.NSurtidor)">
+ <summary>
+ obtine un registro según la clave primaria
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NSurtidor.Lista">
+ <summary>
+ Obtiene todos los registros de la tabla
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTablaGeneral.TipoGuia_Condicion">
+ <summary>
+ Lista la condicion de entraga en la guia remisión(venta, consignacion entre otros
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTablaGeneral.TipoDocumento">
+ <summary>
+ Relación de comprobantes para operaciones (Facturas, bolestas, partes y guias)
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTablaGeneral.tipodocumentoGeneral">
+ <summary>
+ 
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTablaGeneral.TipoPago">
+ <summary>
+ Lista todos los tipos de pagos para operaciones de venta y compra
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTablaGeneral.TipoGastoVario">
+ <summary>
+ lista de tipos de gastos varios tabla general TGV/ para gastos sin detalle
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTablaGeneral.centroCostoAdm">
+ <summary>
+ Centro de costos administrativo con referencia centro de costo contable
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTablaGeneral.TipoBien">
+ <summary>
+ Tipo de bien tabla 30
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTablaGeneral.Solicitante">
+ <summary>
+ Muesta los solicitantes para los movimientos de entrada y salida
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTbl_Campana_Cupon.Get_IdCupon(System.String)">
+ <summary>
+ Obtiene el ID de cupon
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTbl_Surtidor_Lado.lista_surt_lado">
+ <summary>
+ Lista los surtidores relacionados por lado y tablas dbf
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTipoSurtidor.Agregar(CapaNegocios.NTipoSurtidor)">
+ <summary>
+ Agrega un item a tipo surtidor
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NTipoSurtidor.Actualizar(CapaNegocios.NTipoSurtidor)">
+ <summary>
+ Actualizar el tipo surtidor
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NTipoSurtidor.Eliminar(CapaNegocios.NTipoSurtidor)">
+ <summary>
+ Eliminar registro de la tabla
+ </summary>
+ <param name="d"></param>
+</member>
+<member name="M:CapaNegocios.NTipoSurtidor.Registro(CapaNegocios.NTipoSurtidor)">
+ <summary>
+ Obtiene un registro de tipo surtidor
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NTipoSurtidor.Listar">
+ <summary>
+ Lista todos los tipos de surtidores existentes
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NUsuarioCajaGeneral.RegistroCaja(CapaNegocios.NUsuarioCajaGeneral)">
+ <summary>
+ Obtiene el registro de usario caja
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NUsuarioCajaGeneral.DiarioCaja(System.String,System.String,System.String,System.String,System.DateTime,System.DateTime)">
+ <summary>
+ Retorna los registros de ventas al contado y cobranzas para una sucursal y un cajero
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NVendedor.VentaVendedorResumen(System.DateTime,System.DateTime,System.Data.DataTable,System.Data.DataTable)">
+ <summary>
+ Retorna un resumen de ventas por vendedor y por familia
+ </summary>
+ <param name="fechai"></param>
+ <param name="fechaf"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NVendedor.VentaVendedor(System.DateTime,System.DateTime,System.Data.DataTable,System.Data.DataTable)">
+ <summary>
+ Retorna las ventas por comprobante y producto
+ </summary>
+ <param name="fechai"></param>
+ <param name="fechaf"></param>
+ <returns></returns>
+</member>
+<member name="M:CapaNegocios.NVendedor.VentaxVendedor(System.DateTime,System.DateTime,System.Data.DataTable,System.Data.DataTable)">
+ <summary>
+ retorna las ventas por comprobante 
+ </summary>
+ <param name="fechai"></param>
+ <param name="fechaf"></param>
+ <returns></returns>
+</member>
+</members>
+</doc>

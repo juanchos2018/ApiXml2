@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5462BEF9-D81A-4D31-AF92-4B9510D37CDB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CapaEstilo</RootNamespace>
+    <AssemblyName>CapaEstilo</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaEstilo.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CapaEstilo.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GecSac_Proyecto\CapaNegocios\bin\Debug\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClsEstilo.vb" />
+    <Compile Include="ClsSeguridad.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Numalet.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\120px-Vista-Login_Manager.png" />
+    <None Include="Resources\2_6_PrintPreferences.ico" />
+    <None Include="Resources\2_Printer.ico" />
+    <None Include="Resources\3.jpg" />
+    <None Include="Resources\331752412_1042012171520.jpg" />
+    <None Include="Resources\48px-Crystal_Clear_action_apply.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_edit.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_editpaste.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_edit_add.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_edit_remove.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_exit.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_reload.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_share.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_stop.png" />
+    <None Include="Resources\48px-Crystal_Clear_action_viewmag.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_clean.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_korganizer.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_kservices.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_kspread.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_kview.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_kwrite.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_noatun.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_password.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_personal.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_printer.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_restart.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_shutdown.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_vcalendar.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_Volume_Manager.png" />
+    <None Include="Resources\48px-Crystal_Clear_app_xmag.png" />
+    <None Include="Resources\48px-Crystal_Clear_device_3floppy_mount.png" />
+    <None Include="Resources\48px-Crystal_Clear_device_blockdevice.png" />
+    <None Include="Resources\48px-Crystal_Clear_device_floppy_unmount.png" />
+    <None Include="Resources\48px-Crystal_Clear_filesystem_folder_txt.png" />
+    <None Include="Resources\48px-Crystal_Clear_kdmconfig-danger.png" />
+    <None Include="Resources\48px-Crystal_Clear_kdm_user_male.png" />
+    <None Include="Resources\48px-Crystal_Clear_mimetype_colorscm.png" />
+    <None Include="Resources\48px-Crystal_Clear_mimetype_log.png" />
+    <None Include="Resources\48px-Crystal_Clear_mimetype_txt2.png" />
+    <None Include="Resources\48px-Crystal_Clear_Password.png" />
+    <None Include="Resources\4_3_Download.ico" />
+    <None Include="Resources\5_3_WinOS_Support.ico" />
+    <None Include="Resources\5_5_Troubleshooting.ico" />
+    <None Include="Resources\5_Support.ico" />
+    <None Include="Resources\aceptar16x16.png" />
+    <None Include="Resources\addProducto.png" />
+    <None Include="Resources\advanced_4.ico" />
+    <None Include="Resources\agregar16x16.png" />
+    <None Include="Resources\atras16x16.png" />
+    <None Include="Resources\backgroundblack.jpg" />
+    <None Include="Resources\backgroundblue.jpg" />
+    <None Include="Resources\backSIGMAAVEO.jpg" />
+    <None Include="Resources\BSC10_2.png" />
+    <None Include="Resources\btnaceptar.png" />
+    <None Include="Resources\buscar16x16.png" />
+    <None Include="Resources\cancelar16x16.png" />
+    <None Include="Resources\carrito.png" />
+    <None Include="Resources\cerrar16x16.png" />
+    <None Include="Resources\chart-icon.png" />
+    <None Include="Resources\Checked.bmp" />
+    <None Include="Resources\checklist.png" />
+    <None Include="Resources\clave.png" />
+    <None Include="Resources\clave_01.png" />
+    <None Include="Resources\ClientsOnQueue.ico" />
+    <None Include="Resources\compra2.jpg" />
+    <None Include="Resources\compra3.jpg" />
+    <None Include="Resources\crecimiento.jpg" />
+    <None Include="Resources\Crystal_Clear_mimetype_mime_txt.png" />
+    <None Include="Resources\cupon.png" />
+    <None Include="Resources\Delete.ico" />
+    <None Include="Resources\delete12x12.png" />
+    <None Include="Resources\delete9x9.png" />
+    <None Include="Resources\DisplayIcon.ico" />
+    <None Include="Resources\DocumentRepository.ico" />
+    <None Include="Resources\DomainComponent.ico" />
+    <None Include="Resources\dpr2btn.ico" />
+    <None Include="Resources\DRAG1PG.ICO" />
+    <None Include="Resources\dvd-database.ico" />
+    <None Include="Resources\dxcarousel.ico" />
+    <None Include="Resources\Editar16x16.png" />
+    <None Include="Resources\EditModel.ico" />
+    <None Include="Resources\eliminar16x16.png" />
+    <None Include="Resources\enviarSunat.png" />
+    <None Include="Resources\excel.ico" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\excel16x16.png" />
+    <None Include="Resources\fondodatosiniciales.png" />
+    <None Include="Resources\fondoProcesosdeinstalacion.png" />
+    <None Include="Resources\FondoSigma.jpg" />
+    <None Include="Resources\Fondo_confi.png" />
+    <None Include="Resources\Fondo_general.png" />
+    <None Include="Resources\Fondo_GS.jpg" />
+    <None Include="Resources\Fondo_Inventarios.png" />
+    <None Include="Resources\fondo_logo.jpg" />
+    <None Include="Resources\fondo_menustrip.png" />
+    <None Include="Resources\Fondo_proveedores.png" />
+    <None Include="Resources\Fondo_tesoreria.png" />
+    <None Include="Resources\Fondo_ventas.png" />
+    <None Include="Resources\gfserrortogroove.ico" />
+    <None Include="Resources\grafico.png" />
+    <None Include="Resources\graph.ico" />
+    <None Include="Resources\GRAPH01.ICO" />
+    <None Include="Resources\GRAPH09.ICO" />
+    <None Include="Resources\grifoSem-1.png" />
+    <None Include="Resources\grifoSem.png" />
+    <None Include="Resources\grifo_caja.png" />
+    <None Include="Resources\grifo_caja_1.png" />
+    <None Include="Resources\guardar16x16.png" />
+    <None Include="Resources\GWE.ICO" />
+    <None Include="Resources\Header.png" />
+    <None Include="Resources\HLM.ico" />
+    <None Include="Resources\ICON1.ico" />
+    <None Include="Resources\ICON2.ico" />
+    <None Include="Resources\ICON3.ico" />
+    <None Include="Resources\ICON4.ico" />
+    <None Include="Resources\ICONO-indicadores.png" />
+    <None Include="Resources\icono_sunat.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\Image2.bmp" />
+    <None Include="Resources\imagenCobranza.png" />
+    <None Include="Resources\imagenConfiguracion.png" />
+    <None Include="Resources\imagenInventario.png" />
+    <None Include="Resources\imagenLogistica.png" />
+    <None Include="Resources\imagenTesoreria.png" />
+    <None Include="Resources\imagenVentas.png" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\ingreso1.jpg" />
+    <None Include="Resources\inheritedreport.ico" />
+    <None Include="Resources\LiqConto.png" />
+    <None Include="Resources\Login1.jpg" />
+    <None Include="Resources\logo.gif" />
+    <None Include="Resources\mail.ico" />
+    <None Include="Resources\market_store01.png" />
+    <None Include="Resources\mdf_ndf_dbfiles.ico" />
+    <None Include="Resources\method.gif" />
+    <None Include="Resources\MONEDA.png" />
+    <None Include="Resources\MySharePoints.ico" />
+    <None Include="Resources\newreport.ico" />
+    <None Include="Resources\NuevoAdd_1.png" />
+    <None Include="Resources\other_9.ico" />
+    <None Include="Resources\pdf_ver.png" />
+    <None Include="Resources\personitas.png" />
+    <None Include="Resources\Portada de Bienvenida.png" />
+    <None Include="Resources\PortadadeConfiguracion.png" />
+    <None Include="Resources\Preview.ico" />
+    <None Include="Resources\Print.ico" />
+    <None Include="Resources\property.gif" />
+    <None Include="Resources\RConto.png" />
+    <None Include="Resources\RConto_1.png" />
+    <None Include="Resources\resultset_first.png" />
+    <None Include="Resources\resultset_last.png" />
+    <None Include="Resources\resultset_next.png" />
+    <None Include="Resources\RgBancos.png" />
+    <None Include="Resources\RgCobranzas.png" />
+    <None Include="Resources\Rgcompras.png" />
+    <None Include="Resources\RgConfigu.png" />
+    <None Include="Resources\RGGuia.png" />
+    <None Include="Resources\RgProductos.png" />
+    <None Include="Resources\RgProveedores-1.png" />
+    <None Include="Resources\RgProveedores.png" />
+    <None Include="Resources\RgTipoCambio.png" />
+    <None Include="Resources\RgTransporte.png" />
+    <None Include="Resources\Rgusuario.png" />
+    <None Include="Resources\RgVendedor.png" />
+    <None Include="Resources\RgVentas.png" />
+    <None Include="Resources\salir.ICO" />
+    <None Include="Resources\salir16x16.png" />
+    <None Include="Resources\Salir_01.png" />
+    <None Include="Resources\sample.gif" />
+    <None Include="Resources\Save.ico" />
+    <None Include="Resources\SearchResults.ico" />
+    <None Include="Resources\siguiente16x16.png" />
+    <None Include="Resources\star.gif" />
+    <None Include="Resources\stock1.jpg" />
+    <None Include="Resources\surtidor.png" />
+    <None Include="Resources\surtidor_1.png" />
+    <None Include="Resources\surtidor_11.png" />
+    <None Include="Resources\surtidor_12.png" />
+    <None Include="Resources\surtidor_1x.png" />
+    <None Include="Resources\surtidor_2.png" />
+    <None Include="Resources\sync.ico" />
+    <None Include="Resources\theApplication.ico" />
+    <None Include="Resources\UserAdd.ico" />
+    <None Include="Resources\UserAdd.png" />
+    <None Include="Resources\venta.jpg" />
+    <None Include="Resources\ver.ICO" />
+    <None Include="Resources\vero.png" />
+    <None Include="Resources\visualizar16x16.png" />
+    <None Include="Resources\VSDocs.ico" />
+    <None Include="Resources\Win8Form.png" />
+    <None Include="Resources\xml.png" />
+    <None Include="Resources\xml1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\171.ICO" />
+    <Content Include="Resources\171_1.ico" />
+    <Content Include="Resources\AddUser_30x30.png" />
+    <Content Include="Resources\administrador.png" />
+    <Content Include="Resources\asientos.png" />
+    <Content Include="Resources\cdr.png" />
+    <Content Include="Resources\comprobanteElectronico.png" />
+    <Content Include="Resources\configurar.png" />
+    <Content Include="Resources\costos.png" />
+    <Content Include="Resources\cotizar.png" />
+    <Content Include="Resources\email16x16 - copia.gif" />
+    <Content Include="Resources\email16x16.gif" />
+    <Content Include="Resources\imagen1-naranja.png" />
+    <Content Include="Resources\imagenConfiguracion1.png" />
+    <Content Include="Resources\images %281%29.jpg" />
+    <Content Include="Resources\images %282%29.jpg" />
+    <Content Include="Resources\images %283%29.jpg" />
+    <Content Include="Resources\imprimir16x16.png" />
+    <Content Include="Resources\inventario.png" />
+    <Content Include="Resources\Login.jpg" />
+    <Content Include="Resources\logo_sistema-sicovensoft1.ico" />
+    <Content Include="Resources\NuevoAdd.png" />
+    <Content Include="Resources\pagos.png" />
+    <Content Include="Resources\pdf.png" />
+    <None Include="Resources\pnlTitulo2.png" />
+    <Content Include="Resources\resultset_previous.png" />
+    <Content Include="Resources\SIG-ICONO.ico" />
+    <Content Include="Resources\sunat-logo.gif" />
+    <Content Include="Resources\sunat-logo1.gif" />
+    <Content Include="Resources\sunat16x16.png" />
+    <Content Include="Resources\Utilitario.png" />
+    <Content Include="Resources\ventas.png" />
+    <Content Include="Resources\ventas_gestion.png" />
+    <Content Include="Resources\visualizar.png" />
+    <Content Include="Resources\visualizar1.png" />
+    <Content Include="Resources\visualizaro.png" />
+    <Content Include="Resources\WinXPSetV4 Icon 23.ico" />
+    <Content Include="Resources\WinXPSetV4 Icon 231.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

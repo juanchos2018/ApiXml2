@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="conexion">
+      <rd:DataSourceID>ff42e294-85b3-41e8-a5a9-f6aba56ff86f</rd:DataSourceID>
+      <DataSourceReference>conexion</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>2.5cm</RightMargin>
+  <LeftMargin>2.5cm</LeftMargin>
+  <BottomMargin>2.5cm</BottomMargin>
+  <rd:ReportID>46b9bdf7-af2d-4fae-8612-5f57d02bf691</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="conexion">
+      <Fields>
+        <Field Name="Grupo">
+          <DataField>Grupo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdAlmacen">
+          <DataField>IdAlmacen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TipoDocumento">
+          <DataField>TipoDocumento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroDocumento">
+          <DataField>NumeroDocumento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FechaDocumento">
+          <DataField>FechaDocumento</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="IdChofer">
+          <DataField>IdChofer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdTransportista">
+          <DataField>IdTransportista</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdArticulo">
+          <DataField>IdArticulo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Descripcion">
+          <DataField>Descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cantidad">
+          <DataField>Cantidad</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteMN">
+          <DataField>ImporteMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteIGV">
+          <DataField>ImporteIGV</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PrecioSIGV">
+          <DataField>PrecioSIGV</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="IdMovimiento">
+          <DataField>IdMovimiento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Movimiento">
+          <DataField>Movimiento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>conexion</DataSourceName>
+        <CommandText>SELECT  'ALMACEN' AS Grupo,D.IdAlmacen, D.TipoDocumento, D.NumeroDocumento, M.FechaDocumento, M.IdChofer, M.IdTransportista, D.IdArticulo, D.Descripcion, 
+                      CASE WHEN M.TipoMovimiento = 'S' THEN D .Cantidad ELSE D .Cantidad * - 1 END AS Cantidad,
+0 as ImporteMN, 0 as ImporteIGV, 0 as PrecioSIGV,
+ M.IdMovimiento, Tm.Descripcion AS Movimiento
+FROM         Movimiento AS M INNER JOIN
+                      DetalleMovimiento AS D ON M.IdAlmacen = D.IdAlmacen AND M.TipoDocumento = D.TipoDocumento AND M.NumeroDocumento = D.NumeroDocumento AND 
+                      M.IdAgencia = D.IdLocalidad INNER JOIN
+                      DocMovAlmacen AS Tm ON M.TipoMovimiento = Tm.TipoMov AND M.IdMovimiento = Tm.IdMovimiento
+WHERE     (M.IdChofer IS NOT NULL)
+union all
+SELECT 'FACTURACIÓN' AS Grupo, c.IdAlmacen,c.IdTipoDocumento, (c.Serie+c.NumeroDocumento) as NumeroDocumento, c.FechaDocumento, c.Idchofer, c.IdTransportista,  
+dc.IdArticulo, dc.Descripcion, dc.Cantidad*-1, dc.ImporteMN, dc.ImporteIGV, dc.PrecioSIGV,'X' AS IdMovimiento,'LIQUIDACION'AS Movimiento
+FROM         Comprobante AS c INNER JOIN
+                      DetalleComprobante AS dc ON c.IdAgencia = dc.IdAgencia AND c.IdTipoDocumento = dc.IdTipoDocumento AND c.Serie = dc.Serie AND 
+                      c.NumeroDocumento = dc.NumeroDocumento AND c.IdAlmacen = dc.IdAlmacen</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Width>22.07936cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>2cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <DataSetName>conexion</DataSetName>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>1.5cm</Width>
+            <DynamicRows>
+              <Grouping Name="matrix1_IdChofer">
+                <GroupExpressions>
+                  <GroupExpression>=trim(Fields!IdChofer.Value)</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!IdChofer.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="textbox8">
+                    <rd:DefaultName>textbox8</rd:DefaultName>
+                    <Style>
+                      <BackgroundColor>White</BackgroundColor>
+                      <BorderColor>
+                        <Top>Black</Top>
+                      </BorderColor>
+                      <BorderStyle>
+                        <Top>Solid</Top>
+                      </BorderStyle>
+                      <BorderWidth>
+                        <Top>1pt</Top>
+                      </BorderWidth>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>700</FontWeight>
+                      <PaddingLeft>1pt</PaddingLeft>
+                      <PaddingRight>1pt</PaddingRight>
+                    </Style>
+                    <ZIndex>1</ZIndex>
+                    <CanGrow>true</CanGrow>
+                    <Value>GENERAL</Value>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+              <ReportItems>
+                <Textbox Name="IdChofer">
+                  <rd:DefaultName>IdChofer</rd:DefaultName>
+                  <Style>
+                    <BorderColor>
+                      <Left>Black</Left>
+                      <Top>Black</Top>
+                      <Bottom>Black</Bottom>
+                    </BorderColor>
+                    <BorderStyle>
+                      <Left>Solid</Left>
+                      <Top>Solid</Top>
+                      <Bottom>Solid</Bottom>
+                    </BorderStyle>
+                    <BorderWidth>
+                      <Left>1pt</Left>
+                      <Top>1pt</Top>
+                      <Bottom>1pt</Bottom>
+                    </BorderWidth>
+                    <FontFamily>Courier New</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <PaddingLeft>1pt</PaddingLeft>
+                    <PaddingRight>1pt</PaddingRight>
+                    <Language>es-PE</Language>
+                  </Style>
+                  <ZIndex>5</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!IdChofer.Value</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicRows>
+          </RowGrouping>
+          <RowGrouping>
+            <Width>3.25cm</Width>
+            <DynamicRows>
+              <Grouping Name="matrix1_Grupo">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Grupo.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!Grupo.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="textbox7">
+                    <rd:DefaultName>textbox7</rd:DefaultName>
+                    <Style>
+                      <BackgroundColor>White</BackgroundColor>
+                      <BorderColor>
+                        <Top>Black</Top>
+                      </BorderColor>
+                      <BorderStyle>
+                        <Top>Solid</Top>
+                      </BorderStyle>
+                      <BorderWidth>
+                        <Top>1pt</Top>
+                      </BorderWidth>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>700</FontWeight>
+                      <PaddingLeft>1pt</PaddingLeft>
+                      <PaddingRight>1pt</PaddingRight>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>DIFERENCIA(+/-)</Value>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+              <ReportItems>
+                <Textbox Name="Grupo">
+                  <rd:DefaultName>Grupo</rd:DefaultName>
+                  <Style>
+                    <BorderColor>
+                      <Top>Black</Top>
+                      <Bottom>Black</Bottom>
+                    </BorderColor>
+                    <BorderStyle>
+                      <Top>Solid</Top>
+                      <Bottom>Solid</Bottom>
+                    </BorderStyle>
+                    <BorderWidth>
+                      <Top>1pt</Top>
+                      <Bottom>1pt</Bottom>
+                    </BorderWidth>
+                    <FontFamily>Courier New</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <PaddingLeft>1pt</PaddingLeft>
+                    <PaddingRight>1pt</PaddingRight>
+                    <Language>es-PE</Language>
+                  </Style>
+                  <ZIndex>4</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!Grupo.Value</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicRows>
+          </RowGrouping>
+          <RowGrouping>
+            <Width>7.25cm</Width>
+            <DynamicRows>
+              <Grouping Name="matrix1_Movimiento">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Movimiento.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!Movimiento.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <ReportItems>
+                <Textbox Name="Movimiento">
+                  <rd:DefaultName>Movimiento</rd:DefaultName>
+                  <Style>
+                    <BorderColor>
+                      <Top>Black</Top>
+                      <Bottom>Black</Bottom>
+                    </BorderColor>
+                    <BorderStyle>
+                      <Top>Solid</Top>
+                      <Bottom>Solid</Bottom>
+                    </BorderStyle>
+                    <BorderWidth>
+                      <Top>1pt</Top>
+                      <Bottom>1pt</Bottom>
+                    </BorderWidth>
+                    <FontFamily>Courier New</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <PaddingLeft>1pt</PaddingLeft>
+                    <PaddingRight>1pt</PaddingRight>
+                    <Language>es-PE</Language>
+                  </Style>
+                  <ZIndex>3</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!Movimiento.Value</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <Top>0.53333cm</Top>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>0.53333cm</Height>
+            <DynamicColumns>
+              <Grouping Name="matrix1_IdArticulo">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!IdArticulo.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!IdArticulo.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <ReportItems>
+                <Textbox Name="IdArticulo">
+                  <rd:DefaultName>IdArticulo</rd:DefaultName>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <FontFamily>Courier New</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <TextAlign>Center</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <ZIndex>7</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!IdArticulo.Value</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicColumns>
+          </ColumnGrouping>
+          <ColumnGrouping>
+            <Height>0.53333cm</Height>
+            <StaticColumns>
+              <StaticColumn>
+                <ReportItems>
+                  <Textbox Name="textbox5">
+                    <rd:DefaultName>textbox5</rd:DefaultName>
+                    <Style>
+                      <BorderColor>
+                        <Bottom>Black</Bottom>
+                      </BorderColor>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                        <Bottom>Solid</Bottom>
+                      </BorderStyle>
+                      <BorderWidth>
+                        <Bottom>1pt</Bottom>
+                      </BorderWidth>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <TextAlign>Center</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <ZIndex>6</ZIndex>
+                    <CanGrow>true</CanGrow>
+                    <Value>Cantidad</Value>
+                  </Textbox>
+                </ReportItems>
+              </StaticColumn>
+            </StaticColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <Width>14cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox4">
+              <rd:DefaultName>textbox4</rd:DefaultName>
+              <Style>
+                <BorderColor>
+                  <Right>Black</Right>
+                  <Bottom>Black</Bottom>
+                </BorderColor>
+                <BorderStyle>
+                  <Right>Solid</Right>
+                  <Bottom>Solid</Bottom>
+                </BorderStyle>
+                <BorderWidth>
+                  <Right>1pt</Right>
+                  <Bottom>1pt</Bottom>
+                </BorderWidth>
+                <FontFamily>Courier New</FontFamily>
+                <FontSize>8pt</FontSize>
+                <TextAlign>Center</TextAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+              <ZIndex>8</ZIndex>
+              <CanGrow>true</CanGrow>
+              <Value>
+              </Value>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Style>
+          <FontFamily>Courier New</FontFamily>
+          <Language>es-PE</Language>
+        </Style>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.35cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox2">
+                    <rd:DefaultName>textbox2</rd:DefaultName>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <Format>##,##0.00</Format>
+                      <PaddingLeft>1pt</PaddingLeft>
+                      <PaddingRight>1pt</PaddingRight>
+                      <Language>es-PE</Language>
+                    </Style>
+                    <ZIndex>2</ZIndex>
+                    <CanGrow>true</CanGrow>
+                    <Value>=Sum(Fields!Cantidad.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+    </ReportItems>
+    <Height>2.29999cm</Height>
+  </Body>
+  <Language>es-ES</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="conexion">
+    <Query>
+      <DataSourceReference>conexion</DataSourceReference>
+      <CommandText>select c.FechaDocumento,c.IdCliente,c.NombreCliente,c.IdFormaVenta,d.IdAlmacen,c.idcaja,c.Idturno,d.IdTipoDocumento,d.Serie,d.NumeroDocumento,d.IdArticulo,d.Descripcion
+,d.cantidad,d.PrecioVenta,d.PrecioSIGV,d.ImporteIGV,d.ImporteMN,d.lado from DetalleComprobante d
+inner join Comprobante c on d.IdAlmacen=c.IdAlmacen and d.IdTipoDocumento=c.IdTipoDocumento
+and d.Serie=c.Serie and d.NumeroDocumento=c.NumeroDocumento</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+    </Query>
+    <Fields>
+      <Field Name="FechaDocumento">
+        <DataField>FechaDocumento</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="IdCliente">
+        <DataField>IdCliente</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="NombreCliente">
+        <DataField>NombreCliente</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="IdFormaVenta">
+        <DataField>IdFormaVenta</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="IdAlmacen">
+        <DataField>IdAlmacen</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="idcaja">
+        <DataField>idcaja</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Idturno">
+        <DataField>Idturno</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="IdTipoDocumento">
+        <DataField>IdTipoDocumento</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Serie">
+        <DataField>Serie</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="NumeroDocumento">
+        <DataField>NumeroDocumento</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="IdArticulo">
+        <DataField>IdArticulo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Descripcion">
+        <DataField>Descripcion</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="cantidad">
+        <DataField>cantidad</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="PrecioVenta">
+        <DataField>PrecioVenta</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="PrecioSIGV">
+        <DataField>PrecioSIGV</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="ImporteIGV">
+        <DataField>ImporteIGV</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="ImporteMN">
+        <DataField>ImporteMN</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="lado">
+        <DataField>lado</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

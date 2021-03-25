@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="conexion">
+      <DataSourceReference>conexion</DataSourceReference>
+      <rd:DataSourceID>ce6c1c3c-33eb-453a-b8f2-6c3503254451</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.2cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="Empresa">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PERUTECNOLOGY SA</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese el nombre de la empresa:</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox30">
+                      <rd:DefaultName>textbox30</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox31">
+                      <rd:DefaultName>textbox31</rd:DefaultName>
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox32">
+                      <rd:DefaultName>textbox32</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox33">
+                      <rd:DefaultName>textbox33</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>TOTAL PROVEEDORES</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox34">
+                      <rd:DefaultName>textbox34</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>N</Format>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!AfectoMN.Value, "conexion")+Sum(Fields!InafectoMN.Value, "conexion")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.75cm</Left>
+        <DataSetName>conexion</DataSetName>
+        <TableGroups>
+          <TableGroup>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox25">
+                          <rd:DefaultName>textbox25</rd:DefaultName>
+                          <ZIndex>14</ZIndex>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Microsoft Sans Serif</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!IdTipoPersona.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox4">
+                          <rd:DefaultName>textbox4</rd:DefaultName>
+                          <ZIndex>13</ZIndex>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Microsoft Sans Serif</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Documento.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="ARUC">
+                          <rd:DefaultName>ARUC</rd:DefaultName>
+                          <ZIndex>12</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Microsoft Sans Serif</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Ruc.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox6">
+                          <rd:DefaultName>textbox6</rd:DefaultName>
+                          <ZIndex>11</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Microsoft Sans Serif</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!NombreCompleto.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox7">
+                          <rd:DefaultName>textbox7</rd:DefaultName>
+                          <ZIndex>10</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Microsoft Sans Serif</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>N</Format>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Sum(Fields!AfectoMN.Value, "table1_ARUC")+Sum(Fields!InafectoMN.Value, "table1_ARUC")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.53333cm</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=Fields!Ruc.Value</SortExpression>
+                <Direction>Ascending</Direction>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="table1_ARUC">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Ruc.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Width>15cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox21">
+                      <rd:DefaultName>textbox21</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <rd:DefaultName>textbox24</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.53333cm</Height>
+            </TableRow>
+          </TableRows>
+          <Visibility>
+            <Hidden>true</Hidden>
+          </Visibility>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <ZIndex>19</ZIndex>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>PERS</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox22">
+                      <rd:DefaultName>textbox22</rd:DefaultName>
+                      <ZIndex>18</ZIndex>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>T.DOC</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <ZIndex>17</ZIndex>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>RUC/DOC</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <ZIndex>16</ZIndex>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>NOMBRE</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <ZIndex>15</ZIndex>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Microsoft Sans Serif</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>IMPORTE TOTAL</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.53333cm</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.98361cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.47541cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.45902cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>7.13115cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.95082cm</Width>
+          </TableColumn>
+        </TableColumns>
+      </Table>
+    </ReportItems>
+    <Height>2.23491cm</Height>
+  </Body>
+  <PageHeader>
+    <ReportItems>
+      <Textbox Name="textbox18">
+        <ZIndex>2</ZIndex>
+        <Width>4.7619cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!Empresa.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox19">
+        <Top>1cm</Top>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Tahoma</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>12pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.75cm</Height>
+        <Value>REPORTE DE TOTALES DE COMPRAS POR PROVEEDOR PARA PDT-SUNAT</Value>
+      </Textbox>
+      <Textbox Name="textbox35">
+        <Left>14cm</Left>
+        <rd:DefaultName>textbox35</rd:DefaultName>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Microsoft Sans Serif</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>="Pag." + Globals!PageNumber.ToString</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>2cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageHeader>
+  <rd:ReportID>389842d3-a72a-4950-8a0e-afa41e6a33c4</rd:ReportID>
+  <LeftMargin>2.2cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="conexion">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT *FROM PDTCompra</CommandText>
+        <DataSourceName>conexion</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="IdSubDiario">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdSubDiario</DataField>
+        </Field>
+        <Field Name="NroComprobante">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NroComprobante</DataField>
+        </Field>
+        <Field Name="Anio">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Anio</DataField>
+        </Field>
+        <Field Name="FechaComprobante">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>FechaComprobante</DataField>
+        </Field>
+        <Field Name="FechaDocumento">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>FechaDocumento</DataField>
+        </Field>
+        <Field Name="TipoDocumento">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TipoDocumento</DataField>
+        </Field>
+        <Field Name="Serie">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Serie</DataField>
+        </Field>
+        <Field Name="NroDocumento">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NroDocumento</DataField>
+        </Field>
+        <Field Name="TipoCambio">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TipoCambio</DataField>
+        </Field>
+        <Field Name="ImporteMN">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ImporteMN</DataField>
+        </Field>
+        <Field Name="AfectoMN">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>AfectoMN</DataField>
+        </Field>
+        <Field Name="InafectoMN">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>InafectoMN</DataField>
+        </Field>
+        <Field Name="IGVMN">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>IGVMN</DataField>
+        </Field>
+        <Field Name="TotalMN">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TotalMN</DataField>
+        </Field>
+        <Field Name="PorcIGV">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>PorcIGV</DataField>
+        </Field>
+        <Field Name="APaterno">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>APaterno</DataField>
+        </Field>
+        <Field Name="AMaterno">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AMaterno</DataField>
+        </Field>
+        <Field Name="NOMBRE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Nombre</DataField>
+        </Field>
+        <Field Name="NombreCompleto">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NombreCompleto</DataField>
+        </Field>
+        <Field Name="GLOSA">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Glosa</DataField>
+        </Field>
+        <Field Name="IdTipoPersona">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdTipoPersona</DataField>
+        </Field>
+        <Field Name="PERSONA">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Persona</DataField>
+        </Field>
+        <Field Name="IdTipoDocIden">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdTipoDocIden</DataField>
+        </Field>
+        <Field Name="Documento">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Documento</DataField>
+        </Field>
+        <Field Name="XDocRuc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>XDocRuc</DataField>
+        </Field>
+        <Field Name="Ruc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Ruc</DataField>
+        </Field>
+        <Field Name="IDMONEDA">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdMoneda</DataField>
+        </Field>
+        <Field Name="IdAnexo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdAnexo</DataField>
+        </Field>
+        <Field Name="IdTipoAnexo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdTipoAnexo</DataField>
+        </Field>
+        <Field Name="Columna">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Columna</DataField>
+        </Field>
+        <Field Name="TD_CIA">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TD_CIA</DataField>
+        </Field>
+        <Field Name="RUC_CIA">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RUC_CIA</DataField>
+        </Field>
+        <Field Name="PNSDOC">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PNSDOC</DataField>
+        </Field>
+        <Field Name="PJSRUC">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PJSRUC</DataField>
+        </Field>
+        <Field Name="PNSNOMBRE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PNSNOMBRE</DataField>
+        </Field>
+        <Field Name="PJSNOMBRE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PJSNOMBRE</DataField>
+        </Field>
+        <Field Name="CAL">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CAL</DataField>
+        </Field>
+        <Field Name="OtrosTrib">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OtrosTrib</DataField>
+        </Field>
+        <Field Name="Descrip1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Descrip1</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>16.5cm</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>es-ES</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

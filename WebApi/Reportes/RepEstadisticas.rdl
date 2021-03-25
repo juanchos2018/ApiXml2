@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="conexion">
+      <rd:DataSourceID>182bf56e-6b87-45c2-8e8e-dc8109ba21a5</rd:DataSourceID>
+      <DataSourceReference>conexion</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="Empresa">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PERUTEC</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese el nombre de la empresa:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Anio">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>2008</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese el anio de ejercicio:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MesI">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>03</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese el mes inicial:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MesF">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>05</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese el mes final:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IdMoneda">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese el codigo de la moneda:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Opcion">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese la opcion de agrupacion:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CodigoI">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese el codigo inicial:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CodigoF">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ingrese el codigo final:</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.2cm</RightMargin>
+  <LeftMargin>0.2cm</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox36">
+        <Top>1.2381cm</Top>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>="ESTADISTICAS MENSUALES DE VENTAS DEL "+Parameters!MesI.Value+"/"+Parameters!Anio.Value+" AL "+Parameters!MesF.Value+"/"+Parameters!Anio.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox40">
+        <Width>3.99471cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>=Parameters!Empresa.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox37">
+        <Style>
+          <FontFamily>Microsoft Sans Serif</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>26.5cm</Left>
+        <Height>0.50265cm</Height>
+        <Value>="Pag." + Globals!PageNumber.ToString</Value>
+      </Textbox>
+      <Textbox Name="textbox38">
+        <rd:DefaultName>textbox38</rd:DefaultName>
+        <Top>0.5cm</Top>
+        <Style>
+          <FontFamily>Microsoft Sans Serif</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>23.75cm</Left>
+        <Height>0.50265cm</Height>
+        <Value>=Globals!ExecutionTime</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>2cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>1cm</BottomMargin>
+  <rd:ReportID>172d1644-f7e0-4eb3-8637-e280022be36c</rd:ReportID>
+  <PageWidth>29.7cm</PageWidth>
+  <DataSets>
+    <DataSet Name="conexion">
+      <Fields>
+        <Field Name="IdAgencia">
+          <DataField>IdAgencia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Agencia">
+          <DataField>Agencia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdCodigo">
+          <DataField>IdCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Codigo">
+          <DataField>Codigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MES">
+          <DataField>MES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cantidad">
+          <DataField>cantidad</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteMN">
+          <DataField>ImporteMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteUS">
+          <DataField>ImporteUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>conexion</DataSourceName>
+        <CommandText>EXEC DBO.procRep_EstadisticasMensualesV '1','6202-2RSFAG','VKG-1L/1FAG','2008','3','5','TA01'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>29.26058cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox8">
+        <Top>0.25cm</Top>
+        <Width>6.25cm</Width>
+        <Style>
+          <FontFamily>Microsoft Sans Serif</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>17.5cm</Left>
+        <Height>0.50265cm</Height>
+        <Value>="MONEDA : "+IIF(Parameters!IdMoneda.Value="MN",Parameters!IdMoneda.Value+"    MONEDA NACIONAL ",Parameters!IdMoneda.Value+"    DOLARES ")</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <Top>1cm</Top>
+        <Width>17cm</Width>
+        <Style>
+          <FontFamily>Microsoft Sans Serif</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.75cm</Left>
+        <Height>0.50265cm</Height>
+        <Value>=iif(Parameters!Opcion.Value="1","DEL ARTICULO : "+Parameters!CodigoI.Value+" AL ARTICULO : "+Parameters!CodigoF.Value,
+	IIF(Parameters!Opcion.Value="2","DEL GRUPO : "+Parameters!CodigoI.Value+" AL GRUPO : "+Parameters!CodigoF.Value,"DE LA MARCA : "+Parameters!CodigoI.Value+" A LA MARCA : "+Parameters!CodigoF.Value))</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Top>0.25cm</Top>
+        <Width>8.99471cm</Width>
+        <Style>
+          <FontFamily>Microsoft Sans Serif</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.75cm</Left>
+        <Height>0.50265cm</Height>
+        <Value>="AGENCIA : "+Fields!IdAgencia.Value+"     "+Fields!Agencia.Value</Value>
+      </Textbox>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>2cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <DataSetName>conexion</DataSetName>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>2.5cm</Width>
+            <DynamicRows>
+              <Grouping Name="matrix1_IdCodigo">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!IdCodigo.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!IdCodigo.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="textbox5">
+                    <rd:DefaultName>textbox5</rd:DefaultName>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <TextAlign>Center</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>TOTAL</Value>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+              <ReportItems>
+                <Textbox Name="IdCodigo">
+                  <rd:DefaultName>IdCodigo</rd:DefaultName>
+                  <Style>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <ZIndex>3</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!IdCodigo.Value</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicRows>
+          </RowGrouping>
+          <RowGrouping>
+            <Width>5.25cm</Width>
+            <DynamicRows>
+              <Grouping Name="matrix1_Codigo">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Codigo.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!Codigo.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <ReportItems>
+                <Textbox Name="Codigo">
+                  <rd:DefaultName>Codigo</rd:DefaultName>
+                  <Style>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <ZIndex>2</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!Codigo.Value</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <Top>2cm</Top>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>0.53333cm</Height>
+            <DynamicColumns>
+              <Grouping Name="matrix1_MES">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!MES.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!MES.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="textbox1">
+                    <rd:DefaultName>textbox1</rd:DefaultName>
+                    <Style>
+                      <BorderColor>
+                        <Bottom>Black</Bottom>
+                      </BorderColor>
+                      <BorderStyle>
+                        <Bottom>Solid</Bottom>
+                      </BorderStyle>
+                      <BorderWidth>
+                        <Bottom>1pt</Bottom>
+                      </BorderWidth>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <TextAlign>Right</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <ZIndex>4</ZIndex>
+                    <CanGrow>true</CanGrow>
+                    <Value>TOTAL</Value>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+              <ReportItems>
+                <Textbox Name="MES">
+                  <rd:DefaultName>MES</rd:DefaultName>
+                  <Style>
+                    <BorderColor>
+                      <Bottom>Black</Bottom>
+                    </BorderColor>
+                    <BorderStyle>
+                      <Bottom>Solid</Bottom>
+                    </BorderStyle>
+                    <BorderWidth>
+                      <Bottom>1pt</Bottom>
+                    </BorderWidth>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <TextAlign>Right</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <ZIndex>5</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>=ucase(MonthName(Fields!MES.Value))</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <Width>11.75cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox3">
+              <rd:DefaultName>textbox3</rd:DefaultName>
+              <Style>
+                <BorderColor>
+                  <Bottom>Black</Bottom>
+                </BorderColor>
+                <BorderStyle>
+                  <Bottom>Solid</Bottom>
+                </BorderStyle>
+                <BorderWidth>
+                  <Bottom>1pt</Bottom>
+                </BorderWidth>
+                <FontFamily>Microsoft Sans Serif</FontFamily>
+                <FontSize>8pt</FontSize>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+              <ZIndex>6</ZIndex>
+              <CanGrow>true</CanGrow>
+              <Value>="CODIGO                 DESCRIPCION"
+              </Value>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.53333cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox2">
+                    <rd:DefaultName>textbox2</rd:DefaultName>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <ZIndex>1</ZIndex>
+                    <CanGrow>true</CanGrow>
+                    <Value>=IIF(Parameters!IdMoneda.Value="MN",Sum(Fields!ImporteMN.Value),Sum(Fields!ImporteUS.Value))</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+    </ReportItems>
+    <Height>3.59999cm</Height>
+  </Body>
+  <Language>es-ES</Language>
+  <TopMargin>1cm</TopMargin>
+  <PageHeight>21cm</PageHeight>
+</Report>

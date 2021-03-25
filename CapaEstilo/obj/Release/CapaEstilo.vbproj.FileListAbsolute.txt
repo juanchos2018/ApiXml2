@@ -1,0 +1,14 @@
+C:\PROYECTOS2\APIXML\CapaEstilo\bin\Release\CapaEstilo.dll
+C:\PROYECTOS2\APIXML\CapaEstilo\bin\Release\CapaEstilo.pdb
+C:\PROYECTOS2\APIXML\CapaEstilo\bin\Release\CapaEstilo.xml
+C:\PROYECTOS2\APIXML\CapaEstilo\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\PROYECTOS2\APIXML\CapaEstilo\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\PROYECTOS2\APIXML\CapaEstilo\bin\Release\Microsoft.ReportViewer.WinForms.xml
+C:\PROYECTOS2\APIXML\CapaEstilo\obj\Release\CapaEstilo.vbprojAssemblyReference.cache
+C:\PROYECTOS2\APIXML\CapaEstilo\obj\Release\CapaEstilo.Resources.resources
+C:\PROYECTOS2\APIXML\CapaEstilo\obj\Release\CapaEstilo.vbproj.GenerateResource.cache
+C:\PROYECTOS2\APIXML\CapaEstilo\obj\Release\CapaEstilo.vbproj.CoreCompileInputs.cache
+C:\PROYECTOS2\APIXML\CapaEstilo\obj\Release\CapaEstilo.vbproj.CopyComplete
+C:\PROYECTOS2\APIXML\CapaEstilo\obj\Release\CapaEstilo.dll
+C:\PROYECTOS2\APIXML\CapaEstilo\obj\Release\CapaEstilo.xml
+C:\PROYECTOS2\APIXML\CapaEstilo\obj\Release\CapaEstilo.pdb

@@ -1,0 +1,1743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>8.5in</PageHeight>
+  <PageWidth>12in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="conexion">
+      <Query>
+        <DataSourceName>conexion</DataSourceName>
+        <CommandText>SELECT     Item, Fecha, k.IdArticulo, k.Descripcion, Cantidad, CostoUnitarioMN, CostoUnitarioUS, TipoOperacion, orden, CostoMN, CostoUS, SumaCant, SumaCostoMN, 
+SumaCostoUS, CostoPromMN, CostoPromUS, k.IdProveedor, k.NombreProveedor, Entrada, Salida, TipoDoc, NroDoc, k.IdAlmacen, k.IdAgencia, k.Moneda,
+m.TipoDocumento2,m.NumeroDocumento2,datos.Idcuentacontable,datos.cuenta,datos.IdGrupo,datos.Grupo,datos.IdFamilia,datos.Familia,datos.IdMarca,datos.Marca
+FROM TempKardex k 
+left join 
+Movimiento m on k.IdAlmacen=m.IdAlmacen and k.TipoDoc=m.TipoDocumento and k.NroDoc=m.NumeroDocumento
+left  join(
+select IdArticulo,IdCuentaContable,cta.Descripcion as cuenta,IdGrupo,g.Descripcion as Grupo,IdFamilia, VFAMILIA.Descripcion as Familia,a.IdMarca,VMarca.Marca from Articulo a
+left join (SELECT IdCodigo,Descripcion FROM TablaGeneral where IdGeneral='07')as Cta
+on a.idcuentaContable=cta.Idcodigo left join vgrupo g on a.IdGrupo=g.IdCodigo left join VMarca on a.IdMarca=VMarca.IdMarca 
+left join vfamilia on a.IdFamilia=VFAMILIA.IdCodigo where swControlStock='S' ) Datos on 
+rtrim(k.idarticulo)=datos.idarticulo 
+where k.orden=2</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Item">
+          <DataField>Item</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="IdArticulo">
+          <DataField>IdArticulo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Descripcion">
+          <DataField>Descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cantidad">
+          <DataField>Cantidad</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CostoUnitarioMN">
+          <DataField>CostoUnitarioMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CostoUnitarioUS">
+          <DataField>CostoUnitarioUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TipoOperacion">
+          <DataField>TipoOperacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="orden">
+          <DataField>orden</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CostoMN">
+          <DataField>CostoMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CostoUS">
+          <DataField>CostoUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SumaCant">
+          <DataField>SumaCant</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SumaCostoMN">
+          <DataField>SumaCostoMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SumaCostoUS">
+          <DataField>SumaCostoUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CostoPromMN">
+          <DataField>CostoPromMN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CostoPromUS">
+          <DataField>CostoPromUS</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="IdProveedor">
+          <DataField>IdProveedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NombreProveedor">
+          <DataField>NombreProveedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Entrada">
+          <DataField>Entrada</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Salida">
+          <DataField>Salida</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TipoDoc">
+          <DataField>TipoDoc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NroDoc">
+          <DataField>NroDoc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdAlmacen">
+          <DataField>IdAlmacen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdAgencia">
+          <DataField>IdAgencia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Moneda">
+          <DataField>Moneda</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TipoDocumento2">
+          <DataField>TipoDocumento2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroDocumento2">
+          <DataField>NumeroDocumento2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Idcuentacontable">
+          <DataField>Idcuentacontable</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cuenta">
+          <DataField>cuenta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdGrupo">
+          <DataField>IdGrupo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Grupo">
+          <DataField>Grupo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdFamilia">
+          <DataField>IdFamilia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Familia">
+          <DataField>Familia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdMarca">
+          <DataField>IdMarca</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Marca">
+          <DataField>Marca</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <fyi:Rows xmlns:fyi="http://www.fyireporting.com/schemas">
+        <Row>
+          <Item>2</Item>
+          <Fecha>04/22/2016 00:00:00</Fecha>
+          <IdArticulo>1065</IdArticulo>
+          <Descripcion>CANAL U 2 X 1 X 3/16                                        </Descripcion>
+          <Cantidad>-12.0000</Cantidad>
+          <CostoUnitarioMN>29.661016949</CostoUnitarioMN>
+          <CostoUnitarioUS>8.988186954</CostoUnitarioUS>
+          <TipoOperacion>SV</TipoOperacion>
+          <orden>2</orden>
+          <CostoMN>-355.9322033880000</CostoMN>
+          <CostoUS>-107.8582434480000</CostoUS>
+          <SumaCant>1488.0000</SumaCant>
+          <SumaCostoMN>44135.5932</SumaCostoMN>
+          <SumaCostoUS>13374.4222</SumaCostoUS>
+          <CostoPromMN>29.6610</CostoPromMN>
+          <CostoPromUS>8.9882</CostoPromUS>
+          <IdProveedor> 20516616131</IdProveedor>
+          <NombreProveedor>1 PUNTO 618 S.A..C.</NombreProveedor>
+          <Entrada>0.0000</Entrada>
+          <Salida>12.0000</Salida>
+          <TipoDoc>PS</TipoDoc>
+          <NroDoc>00000026853</NroDoc>
+          <IdAlmacen>T001</IdAlmacen>
+          <IdAgencia>TA01</IdAgencia>
+          <Moneda>MN</Moneda>
+          <TipoDocumento2>FT</TipoDocumento2>
+          <NumeroDocumento2>00040021215</NumeroDocumento2>
+          <Idcuentacontable>20101       </Idcuentacontable>
+          <cuenta>MERCADERIA NACIONAL</cuenta>
+          <IdGrupo>GARRUCHA</IdGrupo>
+          <Grupo>GARRUCHA</Grupo>
+          <IdFamilia>V       </IdFamilia>
+          <Familia>VARIOS</Familia>
+          <IdMarca>S/M                 </IdMarca>
+          <Marca>Sin Marca</Marca>
+        </Row>
+        <Row>
+          <Item>3</Item>
+          <Fecha>04/23/2016 00:00:00</Fecha>
+          <IdArticulo>1065</IdArticulo>
+          <Descripcion>CANAL U 2 X 1 X 3/16                                        </Descripcion>
+          <Cantidad>-25.0000</Cantidad>
+          <CostoUnitarioMN>29.661016949</CostoUnitarioMN>
+          <CostoUnitarioUS>8.988186954</CostoUnitarioUS>
+          <TipoOperacion>SV</TipoOperacion>
+          <orden>2</orden>
+          <CostoMN>-741.5254237250000</CostoMN>
+          <CostoUS>-224.7046738500000</CostoUS>
+          <SumaCant>1463.0000</SumaCant>
+          <SumaCostoMN>43394.0678</SumaCostoMN>
+          <SumaCostoUS>13149.7175</SumaCostoUS>
+          <CostoPromMN>29.6610</CostoPromMN>
+          <CostoPromUS>8.9882</CostoPromUS>
+          <IdProveedor> 20532519609      </IdProveedor>
+          <NombreProveedor>3V INVERSIONES E.I.R.L.                                                         </NombreProveedor>
+          <Entrada>0.0000</Entrada>
+          <Salida>25.0000</Salida>
+          <TipoDoc>PS</TipoDoc>
+          <NroDoc>00000026852</NroDoc>
+          <IdAlmacen>T001</IdAlmacen>
+          <IdAgencia>TA01</IdAgencia>
+          <Moneda>MN</Moneda>
+          <TipoDocumento2>FT</TipoDocumento2>
+          <NumeroDocumento2>00040021214</NumeroDocumento2>
+          <Idcuentacontable>20101       </Idcuentacontable>
+          <cuenta>MERCADERIA NACIONAL</cuenta>
+          <IdGrupo>GARRUCHA</IdGrupo>
+          <Grupo>GARRUCHA</Grupo>
+          <IdFamilia>V       </IdFamilia>
+          <Familia>VARIOS</Familia>
+          <IdMarca>S/M                 </IdMarca>
+          <Marca>Sin Marca</Marca>
+        </Row>
+        <Row>
+          <Item>6</Item>
+          <Fecha>05/06/2016 00:00:00</Fecha>
+          <IdArticulo>1065</IdArticulo>
+          <Descripcion>CANAL U 2 X 1 X 3/16                                        </Descripcion>
+          <Cantidad>-40.0000</Cantidad>
+          <CostoUnitarioMN>31.832165927</CostoUnitarioMN>
+          <CostoUnitarioUS>9.659011356</CostoUnitarioUS>
+          <TipoOperacion>S1</TipoOperacion>
+          <orden>2</orden>
+          <CostoMN>-1273.2866370686400</CostoMN>
+          <CostoUS>-386.3604542366240</CostoUS>
+          <SumaCant>1453.0000</SumaCant>
+          <SumaCostoMN>46252.1371</SumaCostoMN>
+          <SumaCostoUS>14034.5435</SumaCostoUS>
+          <CostoPromMN>31.8322</CostoPromMN>
+          <CostoPromUS>9.6590</CostoPromUS>
+          <IdProveedor> 20516616131</IdProveedor>
+          <NombreProveedor>1 PUNTO 618 S.A..C.</NombreProveedor>
+          <Entrada>0.0000</Entrada>
+          <Salida>40.0000</Salida>
+          <TipoDoc>PS</TipoDoc>
+          <NroDoc>00000026859</NroDoc>
+          <IdAlmacen>T001</IdAlmacen>
+          <IdAgencia>TA01</IdAgencia>
+          <Moneda>MN</Moneda>
+          <TipoDocumento2>FT</TipoDocumento2>
+          <NumeroDocumento2>00040021220</NumeroDocumento2>
+          <Idcuentacontable>20101       </Idcuentacontable>
+          <cuenta>MERCADERIA NACIONAL</cuenta>
+          <IdGrupo>GARRUCHA</IdGrupo>
+          <Grupo>GARRUCHA</Grupo>
+          <IdFamilia>V       </IdFamilia>
+          <Familia>VARIOS</Familia>
+          <IdMarca>S/M                 </IdMarca>
+          <Marca>Sin Marca</Marca>
+        </Row>
+        <Row>
+          <Item>2</Item>
+          <Fecha>04/23/2016 00:00:00</Fecha>
+          <IdArticulo>1071</IdArticulo>
+          <Descripcion>CINTA AISLANTE 3M                                           </Descripcion>
+          <Cantidad>-10.0000</Cantidad>
+          <CostoUnitarioMN>25.000000000</CostoUnitarioMN>
+          <CostoUnitarioUS>7.692307692</CostoUnitarioUS>
+          <TipoOperacion>SV</TipoOperacion>
+          <orden>2</orden>
+          <CostoMN>-250.0000000000000</CostoMN>
+          <CostoUS>-76.9230769200000</CostoUS>
+          <SumaCant>140.0000</SumaCant>
+          <SumaCostoMN>3500.0000</SumaCostoMN>
+          <SumaCostoUS>1076.9231</SumaCostoUS>
+          <CostoPromMN>25.0000</CostoPromMN>
+          <CostoPromUS>7.6923</CostoPromUS>
+          <IdProveedor> 20532519609      </IdProveedor>
+          <NombreProveedor>3V INVERSIONES E.I.R.L.                                                         </NombreProveedor>
+          <Entrada>0.0000</Entrada>
+          <Salida>10.0000</Salida>
+          <TipoDoc>PS</TipoDoc>
+          <NroDoc>00000026852</NroDoc>
+          <IdAlmacen>T001</IdAlmacen>
+          <IdAgencia>TA01</IdAgencia>
+          <Moneda>MN</Moneda>
+          <TipoDocumento2>FT</TipoDocumento2>
+          <NumeroDocumento2>00040021214</NumeroDocumento2>
+          <Idcuentacontable>20101       </Idcuentacontable>
+          <cuenta>MERCADERIA NACIONAL</cuenta>
+          <IdGrupo>PLATINA </IdGrupo>
+          <Grupo>PLATINA</Grupo>
+          <IdFamilia>V       </IdFamilia>
+          <Familia>VARIOS</Familia>
+          <IdMarca>S/M                 </IdMarca>
+          <Marca>Sin Marca</Marca>
+        </Row>
+        <Row>
+          <Item>3</Item>
+          <Fecha>04/25/2016 00:00:00</Fecha>
+          <IdArticulo>1071</IdArticulo>
+          <Descripcion>CINTA AISLANTE 3M                                           </Descripcion>
+          <Cantidad>-15.0000</Cantidad>
+          <CostoUnitarioMN>25.000000000</CostoUnitarioMN>
+          <CostoUnitarioUS>7.692307692</CostoUnitarioUS>
+          <TipoOperacion>SV</TipoOperacion>
+          <orden>2</orden>
+          <CostoMN>-375.0000000000000</CostoMN>
+          <CostoUS>-115.3846153800000</CostoUS>
+          <SumaCant>125.0000</SumaCant>
+          <SumaCostoMN>3125.0000</SumaCostoMN>
+          <SumaCostoUS>961.5385</SumaCostoUS>
+          <CostoPromMN>25.0000</CostoPromMN>
+          <CostoPromUS>7.6923</CostoPromUS>
+          <IdProveedor> 20392527916</IdProveedor>
+          <NombreProveedor>ACHE INVESTMENT E.I.R.L.</NombreProveedor>
+          <Entrada>0.0000</Entrada>
+          <Salida>15.0000</Salida>
+          <TipoDoc>PS</TipoDoc>
+          <NroDoc>00000026854</NroDoc>
+          <IdAlmacen>T001</IdAlmacen>
+          <IdAgencia>TA01</IdAgencia>
+          <Moneda>US</Moneda>
+          <TipoDocumento2>FI</TipoDocumento2>
+          <NumeroDocumento2>00010000001</NumeroDocumento2>
+          <Idcuentacontable>20101       </Idcuentacontable>
+          <cuenta>MERCADERIA NACIONAL</cuenta>
+          <IdGrupo>PLATINA </IdGrupo>
+          <Grupo>PLATINA</Grupo>
+          <IdFamilia>V       </IdFamilia>
+          <Familia>VARIOS</Familia>
+          <IdMarca>S/M                 </IdMarca>
+          <Marca>Sin Marca</Marca>
+        </Row>
+        <Row>
+          <Item>4</Item>
+          <Fecha>04/28/2016 00:00:00</Fecha>
+          <IdArticulo>1071</IdArticulo>
+          <Descripcion>CINTA AISLANTE 3M                                           </Descripcion>
+          <Cantidad>-15.0000</Cantidad>
+          <CostoUnitarioMN>25.000000000</CostoUnitarioMN>
+          <CostoUnitarioUS>7.692307692</CostoUnitarioUS>
+          <TipoOperacion>SV</TipoOperacion>
+          <orden>2</orden>
+          <CostoMN>-375.0000000000000</CostoMN>
+          <CostoUS>-115.3846153800000</CostoUS>
+          <SumaCant>110.0000</SumaCant>
+          <SumaCostoMN>2750.0000</SumaCostoMN>
+          <SumaCostoUS>846.1538</SumaCostoUS>
+          <CostoPromMN>25.0000</CostoPromMN>
+          <CostoPromUS>7.6923</CostoPromUS>
+          <IdProveedor> 20428617151</IdProveedor>
+          <NombreProveedor>A &amp; E ARCE S.R.L</NombreProveedor>
+          <Entrada>0.0000</Entrada>
+          <Salida>15.0000</Salida>
+          <TipoDoc>PS</TipoDoc>
+          <NroDoc>00000026855</NroDoc>
+          <IdAlmacen>T001</IdAlmacen>
+          <IdAgencia>TA01</IdAgencia>
+          <Moneda>MN</Moneda>
+          <TipoDocumento2>FT</TipoDocumento2>
+          <NumeroDocumento2>00040021217</NumeroDocumento2>
+          <Idcuentacontable>20101       </Idcuentacontable>
+          <cuenta>MERCADERIA NACIONAL</cuenta>
+          <IdGrupo>PLATINA </IdGrupo>
+          <Grupo>PLATINA</Grupo>
+          <IdFamilia>V       </IdFamilia>
+          <Familia>VARIOS</Familia>
+          <IdMarca>S/M                 </IdMarca>
+          <Marca>Sin Marca</Marca>
+        </Row>
+        <Row>
+          <Item>5</Item>
+          <Fecha>05/08/2016 00:00:00</Fecha>
+          <IdArticulo>1071</IdArticulo>
+          <Descripcion>CINTA AISLANTE 3M                                           </Descripcion>
+          <Cantidad>-10.0000</Cantidad>
+          <CostoUnitarioMN>25.000000000</CostoUnitarioMN>
+          <CostoUnitarioUS>7.692307692</CostoUnitarioUS>
+          <TipoOperacion>SV</TipoOperacion>
+          <orden>2</orden>
+          <CostoMN>-250.0000000000000</CostoMN>
+          <CostoUS>-76.9230769200000</CostoUS>
+          <SumaCant>100.0000</SumaCant>
+          <SumaCostoMN>2500.0000</SumaCostoMN>
+          <SumaCostoUS>769.2308</SumaCostoUS>
+          <CostoPromMN>25.0000</CostoPromMN>
+          <CostoPromUS>7.6923</CostoPromUS>
+          <IdProveedor> 20516986655</IdProveedor>
+          <NombreProveedor>A &amp; Q AUTOMATIZACION Y CONTROL S.A.C.</NombreProveedor>
+          <Entrada>0.0000</Entrada>
+          <Salida>10.0000</Salida>
+          <TipoDoc>PS</TipoDoc>
+          <NroDoc>00000026860</NroDoc>
+          <IdAlmacen>T001</IdAlmacen>
+          <IdAgencia>TA01</IdAgencia>
+          <Moneda>MN</Moneda>
+          <TipoDocumento2>FT</TipoDocumento2>
+          <NumeroDocumento2>00010019748</NumeroDocumento2>
+          <Idcuentacontable>20101       </Idcuentacontable>
+          <cuenta>MERCADERIA NACIONAL</cuenta>
+          <IdGrupo>PLATINA </IdGrupo>
+          <Grupo>PLATINA</Grupo>
+          <IdFamilia>V       </IdFamilia>
+          <Familia>VARIOS</Familia>
+          <IdMarca>S/M                 </IdMarca>
+          <Marca>Sin Marca</Marca>
+        </Row>
+      </fyi:Rows>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>43.0pt</Height>
+    <ReportItems>
+      <Textbox Name="Textbox1">
+        <Top>3.4pt</Top>
+        <Left>0.0pt</Left>
+        <Width>840.21pt</Width>
+        <Height>19.57pt</Height>
+        <Value>RESUMEN DE COSTO DE VENTA</Value>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>Bold</FontWeight>
+          <FontFamily>7</FontFamily>
+          <TextAlign>Center</TextAlign>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <Height>13.50pt</Height>
+        <Width>844.64pt</Width>
+        <Value>=" Del " &amp; Parameters!FechaInicial.Value &amp; " Al " &amp; Parameters!FechaFinal.Value</Value>
+        <ZIndex>1</ZIndex>
+        <Left>0.00pt</Left>
+        <Top>24.00pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Center</TextAlign>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <Body>
+    <ReportItems>
+      <Table Name="Table1">
+        <DataSetName>conexion</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>43.6pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>48.1pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>153.1pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>37.3pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>38.4pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>43.5pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>22.0pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>41.9pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>45.1pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>22.2pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>56.0pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>32.7pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>21.7pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>65.1pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>173.9pt</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>19.8pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox4">
+                      <Value>Fecha</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox5">
+                      <Value>IdArticulo</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox6">
+                      <Value>Descripcion</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox7">
+                      <Value>Cant.</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox8">
+                      <Value>C.Unit Soles</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox9">
+                      <Value>C.Unit Dolares</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox10">
+                      <Value>T.O.</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox12">
+                      <Value>Costo Soles</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox13">
+                      <Value>Costo Dolares</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox23">
+                      <Value>Td</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox24">
+                      <Value>Documento</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox25">
+                      <Value>Alm</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox28">
+                      <Value>Td</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox29">
+                      <Value>Comprobante</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox2">
+                      <Value>Razon Social</Value>
+                      <Style xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableGroups>
+          <TableGroup>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <Height>9.6pt</Height>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>15</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="Textbox37">
+                          <Value>=Fields!IdMarca.Value &amp; " - " &amp; Fields!Marca.Value</Value>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderStyle>
+                              <Default>None</Default>
+                              <Left>None</Left>
+                              <Right>None</Right>
+                              <Top>None</Top>
+                              <Bottom>None</Bottom>
+                            </BorderStyle>
+                            <FontWeight>Bold</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <BorderColor />
+                            <BorderWidth />
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                </TableRow>
+              </TableRows>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </Header>
+            <Footer>
+              <TableRows>
+                <TableRow>
+                  <Height>8.8pt</Height>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox40">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="gf_IdArticulo">
+                          <Value>=Count(Fields!IdArticulo.Value)</Value>
+                          <CanGrow>false</CanGrow>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingRight>2pt</PaddingRight>
+                            <TextAlign>Right</TextAlign>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox41">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox42">
+                          <Value>=sum(Fields!Cantidad.Value)</Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                            <BorderColor />
+                            <BorderWidth />
+                            <Format>#,##0.00</Format>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox43">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox44">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox45">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox47">
+                          <Value>=sum(Fields!CostoMN.Value)</Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                            <BorderColor />
+                            <BorderWidth />
+                            <Format>#,##0.00</Format>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox48">
+                          <Value>=sum(Fields!CostoUS.Value)</Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                            <BorderColor />
+                            <BorderWidth />
+                            <Format>#,##0.00</Format>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox58">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox59">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox60">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox63">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox64">
+                          <Value>
+                          </Value>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox14">
+                          <Value>
+                          </Value>
+                          <Style xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontSize>8pt</FontSize>
+                            <FontFamily>7</FontFamily>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                </TableRow>
+              </TableRows>
+              <RepeatOnNewPage>false</RepeatOnNewPage>
+            </Footer>
+            <Grouping Name="IdcuentacontableGroup">
+              <GroupExpressions>
+                <GroupExpression >=Fields!IdMarca.Value</GroupExpression>
+              </GroupExpressions>
+              <PageBreakAtStart>false</PageBreakAtStart>
+              <PageBreakAtEnd>false</PageBreakAtEnd>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>8.0pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Fecha">
+                      <Value>=Fields!Fecha.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>MM/dd/yy</Format>
+                        <FontFamily>7</FontFamily>
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="IdArticulo">
+                      <Value>=Fields!IdArticulo.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Descripcion">
+                      <Value>=Fields!Descripcion.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <BorderColor />
+                        <BorderWidth />
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Cantidad">
+                      <Value>=Fields!Cantidad.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>2pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                        <FontFamily>7</FontFamily>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="CostoUnitarioMN">
+                      <Value>=Fields!CostoPromMN.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>2pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="CostoUnitarioUS">
+                      <Value>=Fields!CostoPromUS.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>2pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TipoOperacion">
+                      <Value>=Fields!TipoOperacion.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <TextDecoration>None</TextDecoration>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="CostoMN">
+                      <Value>=Fields!CostoMN.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>2pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="CostoUS">
+                      <Value>=Fields!CostoUS.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingRight>0pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TipoDoc">
+                      <Value>=Fields!TipoDoc.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <TextDecoration>None</TextDecoration>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NroDoc">
+                      <Value>=Fields!NroDoc.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <TextDecoration>None</TextDecoration>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="IdAlmacen">
+                      <Value>=Fields!IdAlmacen.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <TextDecoration>None</TextDecoration>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TipoDocumento2">
+                      <Value>=Fields!TipoDocumento2.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <TextDecoration>None</TextDecoration>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NumeroDocumento2">
+                      <Value>=Fields!NumeroDocumento2.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <TextDecoration>None</TextDecoration>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox3">
+                      <Value>=left(Rtrim(Fields!NombreProveedor.Value),25)</Value>
+                      <Style xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                        <BorderStyle>
+                          <Default>None</Default>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                          <Top>None</Top>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>0pt</PaddingLeft>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <BorderColor />
+                        <BorderWidth />
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <Height>12pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox75">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="tf_IdArticulo">
+                      <Value>=Count(Fields!IdArticulo.Value)</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingRight>2pt</PaddingRight>
+                        <TextAlign>Right</TextAlign>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox76">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox77">
+                      <Value>=sum(Fields!Cantidad.Value)</Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox78">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox79">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox80">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox82">
+                      <Value>=sum(Fields!CostoMN.Value)</Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox83">
+                      <Value>=sum(Fields!CostoUS.Value)</Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox93">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox94">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox95">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox98">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox99">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox11">
+                      <Value>
+                      </Value>
+                      <Style xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontFamily>7</FontFamily>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>3.2pt</Left>
+        <Top>0.0pt</Top>
+      </Table>
+    </ReportItems>
+    <Height>62.2pt</Height>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>14pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataSources>
+    <DataSource Name="conexion">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=JMCRPC;Initial Catalog=COM2053245226116;User ID=sa;pwd=Bajo2013</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <ReportParameters>
+    <ReportParameter Name="FechaInicial">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>FechaInicial</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FechaFinal">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>FechaFinal</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Language>es-PE</Language>
+</Report>

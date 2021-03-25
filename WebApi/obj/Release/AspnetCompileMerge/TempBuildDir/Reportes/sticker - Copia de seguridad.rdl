@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="conexion">
+      <ConnectionProperties>
+        <Prompt>Especifique un nombre de usuario y una contraseña para el origen de datos DataSource1</Prompt>
+        <ConnectString>Data Source=Administrador;Initial Catalog=COM1000000000101</ConnectString>
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>8dc1f3f5-03e6-415a-9cd3-1b1008ac9806</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1.2cm</BottomMargin>
+  <RightMargin>0.75cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="Compania">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>compañia o Empresa</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.15cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>0.25cm</ColumnSpacing>
+    <Columns>5</Columns>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>conexion</DataSetName>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>Solid</Left>
+                          <Right>None</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <FontSize>5pt</FontSize>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!idgrupo.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>None</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontSize>5pt</FontSize>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=ucase(Parameters!Compania.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.3cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>2</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="IdArticulo">
+                      <rd:DefaultName>IdArticulo</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>7pt</FontSize>
+                        <BorderColor>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!IdArticulo.Value  </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>2</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>5pt</FontSize>
+                        <BorderColor>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Descripcion1.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.22222cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>5pt</FontSize>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!IdMarca.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>5pt</FontSize>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(Fields!Precio1.Value,"0")+"("+format(Fields!Precio.Value,"0")+") "+Ucase(Fields!Abreviado.Value)+ " "+
+Fields!Mes.Value+right(Fields!Anio.Value,2)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.22222cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontSize>7pt</FontSize>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>1cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.5cm</Width>
+          </TableColumn>
+        </TableColumns>
+      </Table>
+    </ReportItems>
+    <Height>1cm</Height>
+  </Body>
+  <rd:ReportID>5eb15d34-57d1-439b-bee3-585f78e788a5</rd:ReportID>
+  <LeftMargin>1cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="conexion">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT     DetalleComprobanteCompra.Item, Articulo.IdArticulo2 as IdArticulo, 
+                      LEFT(RTRIM(Articulo.Descripcion1), 25) AS Descripcion1, Articulo.IdGrupo, Articulo.IdMarca, LEFT(RTRIM(Proveedor.Abreviado), 3) AS Abreviado, 
+                      DetalleComprobanteCompra.IdProveedor, ROUND(DetalleComprobanteCompra.PrecioUnitario * 2.1 * 100, 0) AS Precio, 
+						dbo.LlenarCeros(Month(ComprobanteCompra.FechaDocumento),2) as Mes, Year(ComprobanteCompra.FechaDocumento) as Anio,
+                      ComprobanteCompra.FechaDocumento,isnull(Articulo.Precio1,0) as Precio1
+FROM         DetalleComprobanteCompra INNER JOIN
+                      Proveedor ON DetalleComprobanteCompra.IdProveedor = Proveedor.IdProveedor INNER JOIN
+                      ComprobanteCompra ON DetalleComprobanteCompra.IdAgencia = ComprobanteCompra.IdAgencia AND 
+                      DetalleComprobanteCompra.IdTipoDocumento = ComprobanteCompra.IdTipoDocumento AND 
+                      DetalleComprobanteCompra.Serie = ComprobanteCompra.Serie AND 
+                      DetalleComprobanteCompra.NumeroDocumento = ComprobanteCompra.NumeroDocumento LEFT OUTER JOIN
+                      Articulo ON DetalleComprobanteCompra.IdArticulo = Articulo.IdArticulo
+WHERE     (DetalleComprobanteCompra.IdAgencia = 'TA01') AND (DetalleComprobanteCompra.IdTipoDocumento = 'FT') 
+AND                    (DetalleComprobanteCompra.Serie = '001') AND (DetalleComprobanteCompra.NumeroDocumento = '0002120')</CommandText>
+        <DataSourceName>conexion</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Item">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Item</DataField>
+        </Field>
+        <Field Name="IdArticulo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdArticulo</DataField>
+        </Field>
+        <Field Name="Descripcion1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Descripcion1</DataField>
+        </Field>
+        <Field Name="idgrupo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdGrupo</DataField>
+        </Field>
+        <Field Name="IdMarca">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdMarca</DataField>
+        </Field>
+        <Field Name="Abreviado">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Abreviado</DataField>
+        </Field>
+        <Field Name="IdProveedor">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>IdProveedor</DataField>
+        </Field>
+        <Field Name="Precio">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Precio</DataField>
+        </Field>
+        <Field Name="Mes">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Mes</DataField>
+        </Field>
+        <Field Name="Anio">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>Anio</DataField>
+        </Field>
+        <Field Name="FechaDocumento">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>FechaDocumento</DataField>
+        </Field>
+        <Field Name="Precio1">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Precio1</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>3.5cm</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>es-ES</Language>
+  <TopMargin>1.2cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

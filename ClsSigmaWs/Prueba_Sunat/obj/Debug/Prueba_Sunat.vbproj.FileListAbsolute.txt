@@ -1,0 +1,16 @@
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\Prueba_Sunat.exe.config
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\Prueba_Sunat.exe
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\Prueba_Sunat.pdb
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\Prueba_Sunat.xml
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\ClsSigmaWs.dll
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\Ionic.Zip.dll
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\Microsoft.Web.Services3.dll
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\ClsSigmaWs.pdb
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\bin\Debug\ClsSigmaWs.xml
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\obj\Debug\Prueba_Sunat.vbprojResolveAssemblyReference.cache
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\obj\Debug\Prueba_Sunat.Form1.resources
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\obj\Debug\Prueba_Sunat.Resources.resources
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\obj\Debug\Prueba_Sunat.vbproj.GenerateResource.Cache
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\obj\Debug\Prueba_Sunat.exe
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\obj\Debug\Prueba_Sunat.xml
+D:\Proyecto\ClsSigmaWs\Prueba_Sunat\obj\Debug\Prueba_Sunat.pdb
